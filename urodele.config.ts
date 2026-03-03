@@ -7,7 +7,7 @@ export const config = {
   },
   head: {
     title: "asharebox",
-    brand: "bluefigca ",
+    brand: "asharebox",
     description: "Less is more",
   },
   footer: {
