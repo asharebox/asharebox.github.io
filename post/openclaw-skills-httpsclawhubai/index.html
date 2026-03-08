@@ -1,0 +1,293 @@
+<!DOCTYPE html> <html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="asharebox"><meta name="msapplication-TileColor" content="#1e2030"><meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"><meta name="description" content="三个标准："><link rel="icon" href="/favicon.ico"><title>openclaw skills https://clawhub.ai/ | asharebox</title><link rel="stylesheet" href="/_astro/_page_.Q94QMkaZ.css">
+<style>.outlines a[data-anchor-tag=H1]{margin-left:0}.outlines a[data-anchor-tag=H2]{margin-left:12px}.outlines a[data-anchor-tag=H3]{margin-left:24px}.outlines a[data-anchor-tag=H4]{margin-left:36px}.outlines a[data-anchor-tag=H5]{margin-left:48px}.outlines a[data-anchor-tag=H6]{margin-left:60px}
+._tabset_selm3_1 ._tab-panel_selm3_1{display:none}._tabset_selm3_1 ._tab-panels_selm3_4{display:flex}._tabset_selm3_1 input[data-tab-name=direct]{display:none}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=direct]{display:block}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-labels_selm3_13 label[data-tab-name=direct]{border-bottom:2px solid red}._tabset_selm3_1 input[data-tab-name=app]{display:none}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=app]{display:block}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-labels_selm3_13 label[data-tab-name=app]{border-bottom:2px solid red}
+</style>
+<link rel="stylesheet" href="/_astro/_page_.ypUYv9mY.css">
+<link rel="stylesheet" href="/_astro/_id_.CdoHgwyN.css"><script type="module" src="/_astro/hoisted.DwDDK78S.js"></script></head> <body class="min-h-screen"> <header class="flex justify-between items-center px-4 py-3 border-b" style="border-color: #292e42;"> <a href="/" class="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity" style="color: #c8d3f5;"> asharebox </a> <div class="flex items-center gap-3">   <div id="auth"></div> </div> </header>  <main> <div class="content"> <div class="w-full flex gap-2 pb-2">  <a href="/tag/Tools" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#Tools </a><a href="/tag/openclaw" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#openclaw </a><a href="/tag/blogmarks" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#blogmarks </a> </div> <div class="ud-root read-only flex-1"><h1 level="1" id="openclaw-skills-httpsclawhubai">openclaw skills <a target="_blank" rel="noopener noreferrer nofollow" href="https://clawhub.ai/">https://clawhub.ai/</a></h1><h2 level="2" id="最适合新手先装的-20-个-OpenClaw-Skills-">最适合新手先装的 20 个 OpenClaw Skills </h2><p>三个标准：</p><ul><li><p>上手门槛低</p></li><li><p>使用场景高频</p></li><li><p>能明显提升第一次体验</p></li></ul><h3 level="3" id="1-tavily-search先给-Agent-接上外脑">1. <code>tavily-search</code>：先给 Agent 接上“外脑”</h3><p>ClawHub 地址：<code>https://clawhub.ai/arun-8687/tavily-search</code></p><p>如果一个 Agent 不能查最新信息，它的能力天花板会立刻降下来。</p><p>所以，对大多数人来说，第一优先级不是“让它更聪明”，而是先让它看到外部世界。</p><p><code>tavily-search</code> 这类联网搜索 Skill 的价值非常直接：</p><ul><li><p>查最新资料</p></li><li><p>验证事实</p></li><li><p>找官网文档</p></li><li><p>补充上下文</p></li></ul><p>尤其你拿它做调研、写作、选型、找案例时，联网能力基本就是基础设施。</p><p>一句话建议：如果你只装一个技能，先装 <code>tavily-search</code>。</p><h3 level="3" id="2-ontology-让它别聊完就忘">2. <code>ontology</code> ：让它别聊完就忘</h3><p>这里其实有两个选择，一个ontology，一个agent-memory</p><p>ClawHub 地址：</p><ul><li><p><code>ontology</code> 可参考：<code>https://clawhub.ai/maverick-software/surrealdb-knowledge-graph-memory</code></p></li><li><p><code>agent-memory</code> 可参考：<code>https://clawhub.ai/kgnvsk/agent-memory-store</code></p></li></ul><p>很多人第一次用 Agent 都会有一个共同吐槽：</p><p><strong>“怎么我刚说过的东西，它转头就忘？”</strong></p><p>这就是为什么记忆类 Skills 很重要。它解决的不是“回答更漂亮”，而是“协作更连续”。</p><p>如果你更看重结构化知识沉淀，可以优先看 <code>ontology</code>；如果你更在意对话连续性和长期上下文，<code>agent-memory</code> 会更直接。</p><p>这类能力特别适合：</p><ul><li><p>长周期项目</p></li><li><p>个人知识管理</p></li><li><p>连续多轮协作</p></li><li><p>固定风格写作与输出</p></li></ul><p>一句话建议：想把 Agent 从“工具”变成“助手”，尽早补上 <code>ontology</code> 或 <code>agent-memory</code>。</p><h3 level="3" id="3-self-improving-agent让它越用越顺手">3. <code>self-improving-agent</code>：让它越用越顺手</h3><p>ClawHub 地址：<code>https://clawhub.ai/pskoett/self-improving-agent</code></p><p>有些 Skill 的价值，不在于第一次有多惊艳，而在于你连续用几次之后，会明显感觉：它在逐渐“会做事”了。</p><p><code>self-improving-agent</code> 往往会帮助 Agent：</p><ul><li><p>记录失败经验</p></li><li><p>调整执行方式</p></li><li><p>优化下一轮动作</p></li><li><p>降低重复犯错概率</p></li></ul><p>对于新手来说，这类技能的最大意义不是“炫技”，而是让你更快体会到 Agent 工作流的核心魅力：不是一次回答，而是持续协作。</p><h3 level="3" id="4-proactive-agent从等你发话到自己往前推">4. <code>proactive-agent</code>：从“等你发话”到“自己往前推”</h3><p>ClawHub 地址：<code>https://clawhub.ai/halthelobster/proactive-agent</code></p><p>大多数新手刚开始用 Agent 时，本质上还是在“问答模式”。你问一句，它答一句；你再催一步，它再走一步。</p><p>而 <code>proactive-agent</code> 这类 Skill，真正改变的是交互关系。</p><p>它会让 Agent 更像一个会自己拆任务、自己推进、自己检查的执行者，而不是一个只会等待指令的聊天窗口。</p><p>适合的场景包括：</p><ul><li><p>做调研方案</p></li><li><p>规划任务步骤</p></li><li><p>拆解复杂目标</p></li><li><p>持续推进多阶段工作</p></li></ul><p>一句话建议：想感受“Agent 味儿”到底在哪里，尽早试试 <code>proactive-agent</code>。</p><h3 level="3" id="5-summarize信息摄入效率直接翻倍">5. <code>summarize</code>：信息摄入效率直接翻倍</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/summarize</code></p><p>如果你平时经常处理这些东西：</p><ul><li><p>长文章</p></li><li><p>PDF</p></li><li><p>视频</p></li><li><p>图片材料</p></li><li><p>网页链接</p></li><li><p>文档说明</p></li></ul><p>那 <code>summarize</code> 会非常高频。</p><p>它的价值并不是简单“帮你缩短字数”，而是帮你更快完成三件事：抓重点、提结构、形成下一步动作。</p><p>很多时候，真正浪费时间的不是“没找到信息”，而是“找到以后来不及消化”。而 <code>summarize</code>，正好是把“阅读”变成“提炼”的加速器。</p><h3 level="3" id="6-github开发者几乎绕不过去">6. <code>github</code>：开发者几乎绕不过去</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/github</code></p><p>如果你本身是程序员，或者哪怕只是偶尔做一点项目开发，<code>github</code> 的优先级就会迅速上升。</p><p>它能帮你处理很多原本要手动来回切换的动作，比如：</p><ul><li><p>搜代码仓库</p></li><li><p>看 issue / PR</p></li><li><p>创建或整理项目</p></li><li><p>辅助理解代码结构</p></li><li><p>快速定位相关实现</p></li></ul><p>它的意义不是替代你写代码，而是把很多外围动作自动化。</p><p>一句话建议：开发者新手包里，<code>github</code> 基本属于“早装早省事”。</p><h3 level="3" id="7-gog最容易让普通用户立刻感知价值">7. <code>gog</code>：最容易让普通用户立刻感知价值</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/gog</code></p><p>如果你不是纯技术用户，而是日常要处理：</p><ul><li><p>邮件</p></li><li><p>日历</p></li><li><p>文档</p></li><li><p>云盘</p></li><li><p>表格</p></li></ul><p>那 <code>gog</code> 这类办公协同 Skill 往往是“最有体感”的一类。</p><p>因为它能直接连接到你每天都在做的工作流。你会第一次明显感受到：Agent 不是在陪你聊天，而是在帮你处理事情。</p><p>尤其对于职场用户、内容团队、运营岗位来说，<code>gog</code> 的实际收益很容易超过很多“看起来更高级”的技能。</p><h3 level="3" id="8-find-skills解决我根本不知道该装什么">8. <code>find-skills</code>：解决“我根本不知道该装什么”</h3><p>ClawHub 地址：<code>https://clawhub.ai/JimLiuxinghai/find-skills</code></p><p>新手常见的卡点不是不会装，而是根本不知道从哪挑。</p><p>这时候，<code>find-skills</code> 就很适合当“导航员”。</p><p>它能帮你做的事情包括：</p><ul><li><p>搜索合适的技能</p></li><li><p>根据任务推荐工具</p></li><li><p>帮你判断优先级</p></li><li><p>缩短试错路径</p></li></ul><p>本质上，它解决的是“选择过载”问题。社区越大、插件越多，<code>find-skills</code> 越重要。</p><h3 level="3" id="9-skill-vetter避免把风险一起装进去">9. <code>skill-vetter</code>：避免把风险一起装进去</h3><p>ClawHub 地址：<code>https://clawhub.ai/spclaudehome/skill-vetter</code></p><p>很多人第一次折腾插件生态，注意力都放在“功能有多强”，却忽视了另一个问题：你装进去的，不只是能力，也可能是风险。</p><p><code>skill-vetter</code> 的价值，恰恰在于：</p><ul><li><p>帮你先做基础检查</p></li><li><p>识别潜在危险权限</p></li><li><p>降低装错东西的概率</p></li><li><p>提醒你哪些代码值得二次确认</p></li></ul><p>尤其新手很容易因为“看起来很火”就直接上手。但真正长期稳定使用的人，通常更在意可控性。</p><p>一句话建议：先装 <code>skill-vetter</code>，再扩功能。</p><h3 level="3" id="10-weather用一个必成的技能建立信心">10. <code>weather</code>：用一个“必成”的技能建立信心</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/weather</code></p><p>最后这类技能可能没有前面那些“重”，但非常适合新手。</p><p><code>weather</code> 的作用是：<strong>让你快速完成一次成功体验。</strong></p><p>它通常配置简单、反馈直接，几乎不会一上来就把你卡在复杂依赖上。对新手来说，这种“立刻可验证”的体验非常重要。</p><p>为什么它重要？因为很多人不是不会学，而是第一轮被挫败感劝退了。一个低门槛、快速出结果的 Skill，能帮你先建立正反馈。</p><h3 level="3" id="11-filesystem先把本地文件处理能力补上">11. <code>filesystem</code>：先把本地文件处理能力补上</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/filesystem</code></p><p>很多新手装完搜索和总结后，下一步马上就会遇到一个现实问题：</p><p><strong>它能不能直接帮我读、找、整理本地文件？</strong></p><p>这时候，<code>filesystem</code> 这类 Skill 就非常关键。它适合用来：</p><ul><li><p>搜索目录结构</p></li><li><p>读取指定文件</p></li><li><p>整理笔记资料</p></li><li><p>辅助批量处理文本资产</p></li></ul><p>如果你日常要和 Markdown、文档、脚本、项目目录打交道，<code>filesystem</code> 的价值会非常高。</p><h3 level="3" id="12-fetch把网页抓取和正文提取变简单">12. <code>fetch</code>：把网页抓取和正文提取变简单</h3><p>ClawHub 地址：<code>https://clawhub.ai/howtimeschange/markdown-fetch</code></p><p>虽然 <code>tavily-search</code> 负责搜索，但真正进入执行阶段时，你往往还需要一个更偏“抓取与读取”的能力。</p><p><code>fetch</code> 这类 Skill 适合：</p><ul><li><p>读取网页正文</p></li><li><p>拉取 API 返回结果</p></li><li><p>获取公开页面内容</p></li><li><p>配合 <code>summarize</code> 做快速信息处理</p></li></ul><p>如果你的工作流里经常有“先找到，再读懂”的步骤，那 <code>fetch</code> 很值得装。</p><h3 level="3" id="13-browser需要真实浏览器操作时非常有用">13. <code>browser</code>：需要真实浏览器操作时非常有用</h3><p>ClawHub 地址：<code>https://clawhub.ai/lucaperret/browsh</code></p><p>有些页面不是普通抓取能解决的，比如需要登录、点击、翻页、等待前端渲染。</p><p>这时候，<code>browser</code> 类 Skill 就能发挥作用。它适合：</p><ul><li><p>打开复杂网页</p></li><li><p>执行真实点击与跳转</p></li><li><p>读取动态渲染内容</p></li><li><p>完成半自动网页操作</p></li></ul><p>对于经常做后台系统操作、表单填写、网页调研的人来说，这类能力很实用。</p><h3 level="3" id="14-python让-Agent-真正能做数据和脚本任务">14. <code>python</code>：让 Agent 真正能做数据和脚本任务</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/python</code></p><p>很多任务不是“查一下”就结束，而是需要进一步计算、转换、清洗和生成结果。</p><p><code>python</code> 类 Skill 的价值就在这里。它适合：</p><ul><li><p>处理 CSV / Excel 数据</p></li><li><p>清洗文本</p></li><li><p>做简单分析</p></li><li><p>写辅助脚本</p></li></ul><p>如果你既做内容又做数据，或者需要让 Agent 帮你自动化一些重复动作，<code>python</code> 基本可以进入前排。</p><h3 level="3" id="15-shell把系统操作能力接进来">15. <code>shell</code>：把系统操作能力接进来</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/shell</code></p><p>如果说 <code>python</code> 更像脚本助手，那 <code>shell</code> 更像操作系统入口。</p><p>它适合：</p><ul><li><p>执行命令行任务</p></li><li><p>批量处理文件</p></li><li><p>跑构建、测试、搜索命令</p></li><li><p>串联已有本地工具链</p></li></ul><p>对于开发者和重度效率用户来说，<code>shell</code> 能让 Agent 的可执行范围明显扩大。</p><h3 level="3" id="16-notion知识管理用户会非常有体感">16. <code>notion</code>：知识管理用户会非常有体感</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/notion</code></p><p>如果你已经把知识库、项目管理或内容规划放在 Notion 里，那 <code>notion</code> 类 Skill 会让协作体验提升非常明显。</p><p>它常见的高频用途包括：</p><ul><li><p>新建页面</p></li><li><p>整理数据库内容</p></li><li><p>更新项目状态</p></li><li><p>把调研结果同步进知识库</p></li></ul><p>对内容创作者、运营和知识管理重度用户来说，<code>notion</code> 很值得放进前 20。</p><h3 level="3" id="17-slack团队协作场景非常顺手">17. <code>slack</code>：团队协作场景非常顺手</h3><p>ClawHub 地址：<code>https://clawhub.ai/steipete/slack</code></p><p>很多人把 Agent 只当成个人工具，但一旦进入团队协作，<code>slack</code> 这类 Skill 的价值就会被迅速放大。</p><p>它适合：</p><ul><li><p>汇总消息</p></li><li><p>发送提醒</p></li><li><p>同步任务进度</p></li><li><p>把分析结果推送给团队</p></li></ul><p>如果你平时要在团队里做信息传递，<code>slack</code> 的价值会远高于单纯聊天。</p><h3 level="3" id="18-calendar时间安排能力要尽早接上">18. <code>calendar</code>：时间安排能力要尽早接上</h3><p>ClawHub 地址：<code>https://clawhub.ai/NDCCCCCC/calendar</code></p><p>很多所谓“效率提升”，最后都落到一个问题：能不能真正帮你安排和推进时间。</p><p><code>calendar</code> 这类 Skill 适合：</p><ul><li><p>创建日程</p></li><li><p>调整提醒</p></li><li><p>整理待办节奏</p></li><li><p>把计划转成实际时间块</p></li></ul><p>如果你已经开始让 Agent 参与工作安排，那 <code>calendar</code> 会比很多炫酷能力更落地。</p><h3 level="3" id="19-email把沟通动作也自动化一部分">19. <code>email</code>：把沟通动作也自动化一部分</h3><p>ClawHub 地址：<code>https://clawhub.ai/porteden/porteden-email</code></p><p>不少人第一次真正感受到 Agent 的生产力提升，不是在写作，也不是在搜索，而是在邮件处理上。</p><p><code>email</code> 类 Skill 可以帮助你：</p><ul><li><p>草拟邮件</p></li><li><p>总结收件箱</p></li><li><p>提炼重点待回复事项</p></li><li><p>生成跟进内容</p></li></ul><p>如果你每天都在收发邮件，它绝对值得进入首批考虑名单。</p><div class="llt-code readonly"><div class="language">perl</div><div class="wrapper"><pre><code>---
+name: porteden-email
+description: Secured Email Mnagement - Gmail, Outlook &amp; Exchange - list, search, <span class="hljs-keyword" class="hljs-keyword">read</span>, <span class="hljs-keyword" class="hljs-keyword">send</span>, reply, forward, <span class="hljs-keyword" class="hljs-keyword">delete</span>, <span class="hljs-keyword" class="hljs-keyword">and</span> modify emails across multiple accounts (gog-cli secure alternative).
+homepage: https:<span class="hljs-regexp" class="hljs-regexp">//p</span>orteden.com
+metadata: {<span class="hljs-string" class="hljs-string">&quot;openclaw&quot;</span>:{<span class="hljs-string" class="hljs-string">&quot;emoji&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;📧&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;requires&quot;</span>:{<span class="hljs-string" class="hljs-string">&quot;bins&quot;</span>:[<span class="hljs-string" class="hljs-string">&quot;porteden&quot;</span>],<span class="hljs-string" class="hljs-string">&quot;env&quot;</span>:[<span class="hljs-string" class="hljs-string">&quot;PE_API_KEY&quot;</span>]},<span class="hljs-string" class="hljs-string">&quot;primaryEnv&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;PE_API_KEY&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;install&quot;</span>:[{<span class="hljs-string" class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;brew&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;kind&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;brew&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;formula&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;porteden/tap/porteden&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;bins&quot;</span>:[<span class="hljs-string" class="hljs-string">&quot;porteden&quot;</span>],<span class="hljs-string" class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;Install porteden (brew)&quot;</span>},{<span class="hljs-string" class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;go&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;kind&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;go&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;module&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;github.com/porteden/cli/cmd/porteden<span class="hljs-variable" class="hljs-variable">@latest</span>&quot;</span>,<span class="hljs-string" class="hljs-string">&quot;bins&quot;</span>:[<span class="hljs-string" class="hljs-string">&quot;porteden&quot;</span>],<span class="hljs-string" class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string" class="hljs-string">&quot;Install porteden (go)&quot;</span>}]}}
+---
+
+<span class="hljs-comment" class="hljs-comment"># porteden email</span>
+
+Use <span class="hljs-string" class="hljs-string">`porteden email`</span> (alias: <span class="hljs-string" class="hljs-string">`porteden mail`</span>) <span class="hljs-keyword" class="hljs-keyword">for</span> email management across multiple accounts. **Use <span class="hljs-string" class="hljs-string">`-jc`</span> flags** <span class="hljs-keyword" class="hljs-keyword">for</span> AI-optimized output.
+
+If <span class="hljs-string" class="hljs-string">`porteden`</span> is <span class="hljs-keyword" class="hljs-keyword">not</span> installed: <span class="hljs-string" class="hljs-string">`brew install porteden/tap/porteden`</span> (<span class="hljs-keyword" class="hljs-keyword">or</span> <span class="hljs-string" class="hljs-string">`go install github.com/porteden/cli/cmd/porteden@latest`</span>).
+
+Setup (once)
+
+- **Browser login (recommended):** <span class="hljs-string" class="hljs-string">`porteden auth login`</span> — opens browser, credentials stored in <span class="hljs-keyword" class="hljs-keyword">system</span> keyring
+- **Direct token:** <span class="hljs-string" class="hljs-string">`porteden auth login --token &lt;key&gt;`</span> — stored in <span class="hljs-keyword" class="hljs-keyword">system</span> keyring
+- **Verify:** <span class="hljs-string" class="hljs-string">`porteden auth status`</span>
+- If <span class="hljs-string" class="hljs-string">`PE_API_KEY`</span> is set in the environment, the CLI uses it automatically (<span class="hljs-keyword" class="hljs-keyword">no</span> login needed).
+
+Common commands
+
+- List emails (<span class="hljs-keyword" class="hljs-keyword">or</span> --today, --yesterday, --week, --days N): <span class="hljs-string" class="hljs-string">`porteden email messages -jc`</span>
+- Filter emails: <span class="hljs-string" class="hljs-string">`porteden email messages --from sender@example.com -jc`</span> (also: --to, --subject, --label, --unread, --has-attachment)
+- Search emails: <span class="hljs-string" class="hljs-string">`porteden email messages -q &quot;keyword&quot; --today -jc`</span>
+- Custom date range: <span class="hljs-string" class="hljs-string">`porteden email messages --after 2026-02-01 --before 2026-02-07 -jc`</span>
+- All emails (auto-pagination): <span class="hljs-string" class="hljs-string">`porteden email messages --week --all -jc`</span>
+- Get single email: <span class="hljs-string" class="hljs-string">`porteden email message &lt;emailId&gt; -jc`</span>
+- Get thread: <span class="hljs-string" class="hljs-string">`porteden email thread &lt;threadId&gt; -jc`</span>
+- Send email: <span class="hljs-string" class="hljs-string">`porteden email send --to user@example.com --subject &quot;Hi&quot; --body &quot;Hello&quot;`</span> (also: --cc, --bcc, --body-file, --body-type text, --importance high)
+- Send with named recipient: <span class="hljs-string" class="hljs-string">`porteden email send --to &quot;John Doe &lt;john@example.com&gt;&quot; --subject &quot;Hi&quot; --body &quot;Hello&quot;`</span>
+- Reply: <span class="hljs-string" class="hljs-string">`porteden email reply &lt;emailId&gt; --body &quot;Thanks&quot;`</span> (add <span class="hljs-string" class="hljs-string">`--reply-all`</span> <span class="hljs-keyword" class="hljs-keyword">for</span> reply all)
+- Forward: <span class="hljs-string" class="hljs-string">`porteden email forward &lt;emailId&gt; --to colleague@example.com`</span> (optional <span class="hljs-string" class="hljs-string">`--body &quot;FYI&quot;`</span>, --cc)
+- Modify email: <span class="hljs-string" class="hljs-string">`porteden email modify &lt;emailId&gt; --mark-read`</span> (also: --mark-unread, --add-labels IMPORTANT, --remove-labels INBOX)
+- Delete email: <span class="hljs-string" class="hljs-string">`porteden email delete &lt;emailId&gt;`</span>
+
+Notes
+
+- Credentials persist in the <span class="hljs-keyword" class="hljs-keyword">system</span> keyring after login. No repeated auth needed.
+- Set <span class="hljs-string" class="hljs-string">`PE_PROFILE=work`</span> to avoid repeating <span class="hljs-string" class="hljs-string">`--profile`</span>.
+- <span class="hljs-string" class="hljs-string">`-jc`</span> is shorthand <span class="hljs-keyword" class="hljs-keyword">for</span> <span class="hljs-string" class="hljs-string">`--json --compact`</span>: strips attachment details, truncates body previews, limits labels, reduces tokens.
+- Use <span class="hljs-string" class="hljs-string">`--all`</span> to auto-fetch all pages; check <span class="hljs-string" class="hljs-string">`hasMore`</span> <span class="hljs-keyword" class="hljs-keyword">and</span> <span class="hljs-string" class="hljs-string">`nextPageToken`</span> in JSON output.
+- Email IDs are provider-prefixed (e.g., <span class="hljs-string" class="hljs-string">`google:abc123`</span>, <span class="hljs-string" class="hljs-string">`m365:xyz789`</span>). Pass them as-is.
+- <span class="hljs-string" class="hljs-string">`--include-body`</span> on <span class="hljs-string" class="hljs-string">`messages`</span> fetches full body (default: preview only). Single <span class="hljs-string" class="hljs-string">`message`</span> includes body by default.
+- <span class="hljs-string" class="hljs-string">`--body`</span> <span class="hljs-keyword" class="hljs-keyword">and</span> <span class="hljs-string" class="hljs-string">`--body-file`</span> are mutually exclusive. Use <span class="hljs-string" class="hljs-string">`--body-type text`</span> <span class="hljs-keyword" class="hljs-keyword">for</span> plain text (default: html).
+- Confirm before sending, replying, forwarding, <span class="hljs-keyword" class="hljs-keyword">or</span> deleting emails.
+- Environment variables: <span class="hljs-string" class="hljs-string">`PE_API_KEY`</span>, <span class="hljs-string" class="hljs-string">`PE_PROFILE`</span>, <span class="hljs-string" class="hljs-string">`PE_TIMEZONE`</span>, <span class="hljs-string" class="hljs-string">`PE_FORMAT`</span>, <span class="hljs-string" class="hljs-string">`PE_COLOR`</span>, <span class="hljs-string" class="hljs-string">`PE_VERBOSE`</span>.
+</code></pre></div></div><h3 level="3" id="20-pdf文档密集型用户的效率补丁">20. <code>pdf</code>：文档密集型用户的效率补丁</h3><p>ClawHub 地址：<code>https://clawhub.ai/awspace/pdf</code></p><p>PDF 是很多人日常工作里最麻烦的一类资料：长、密、结构复杂，还经常不好提取。</p><p><code>pdf</code> 类 Skill 的价值在于：</p><ul><li><p>提取正文</p></li><li><p>抓取表格和重点段落</p></li><li><p>快速总结长文档</p></li><li><p>配合 <code>summarize</code> 做信息压缩</p></li></ul><p>如果你经常看白皮书、方案书、合同、研究报告，这类能力会很高频。</p><h3 level="3" id="新手安装建议顺序">新手安装建议顺序</h3><p>很多人一上来喜欢“一键全装”。坦白说，这通常不是最优解。</p><p>对新手最友好的顺序，应该是：</p><h4 level="4" id="第一步先补基础能力">第一步：先补基础能力</h4><p>优先装：</p><ul><li><p><code>skill-vetter</code></p></li><li><p><code>tavily-search</code></p></li><li><p><code>weather</code></p></li><li><p><code>fetch</code></p></li></ul><p>这一步的目标不是变强，而是先让系统可用、可验证、可继续。</p><h4 level="4" id="第二步再补执行能力">第二步：再补执行能力</h4><p>接着装：</p><ul><li><p><code>summarize</code></p></li><li><p><code>proactive-agent</code></p></li><li><p><code>self-improving-agent</code></p></li><li><p><code>filesystem</code></p></li><li><p><code>pdf</code></p></li></ul><p>这一步开始，你会明显感受到 Agent 从“会回答”变成“会做事”。</p><h4 level="4" id="第三步最后补场景能力">第三步：最后补场景能力</h4><p>再根据你是谁，来选分支：</p><p>如果你偏开发：</p><ul><li><p><code>github</code></p></li><li><p><code>ontology</code> 或 <code>agent-memory</code></p></li><li><p><code>python</code></p></li><li><p><code>shell</code></p></li><li><p><code>browser</code></p></li></ul><p>如果你偏办公与内容：</p><ul><li><p><code>gog</code></p></li><li><p><code>ontology</code> 或 <code>agent-memory</code></p></li><li><p><code>notion</code></p></li><li><p><code>calendar</code></p></li><li><p><code>email</code></p></li></ul><p>如果你还在探索：</p><ul><li><p><code>find-skills</code></p></li><li><p><code>slack</code></p></li></ul><h3 level="3" id="新手最容易踩的-4-个坑">新手最容易踩的 4 个坑</h3><h4 level="4" id="1-装得太多">1. 装得太多</h4><p>技能不是越多越好。过多能力叠加，往往会带来：</p><ul><li><p>决策混乱</p></li><li><p>调用变慢</p></li><li><p>成本变高</p></li><li><p>调试困难</p></li></ul><p>新手最好的状态不是“全都有”，而是“先有 3 到 5 个最常用的”。</p><h4 level="4" id="2-一开始就追求高级玩法">2. 一开始就追求高级玩法</h4><p>自动化编排、复杂代理链、深度多工具协同，这些当然很酷。但如果你连基础工作流都还没跑顺，太早上复杂玩法，只会增加挫败感。</p><p>新手阶段最重要的不是“堆复杂度”，而是尽快建立稳定使用习惯。</p><h4 level="4" id="3-忽视权限与安全">3. 忽视权限与安全</h4><p>任何能帮你做事的 Skill，本质上都意味着它可能拥有某种权限。</p><p>所以你至少要养成三个习惯：</p><ul><li><p>安装前看来源</p></li><li><p>使用前看权限</p></li><li><p>定期清理与更新</p></li></ul><p>别因为图快，把长期风险一起带进来。</p><h4 level="4" id="4-没有围绕真实任务来装">4. 没有围绕真实任务来装</h4><p>最容易浪费时间的方式，就是围绕“别人说好用”来装技能。</p><p>更有效的方式是反过来问自己：</p><ul><li><p>我每天最重复的动作是什么？</p></li><li><p>我最痛的低效环节是什么？</p></li><li><p>我现在最需要被替代的，是查资料、做总结、写文档，还是项目协作？</p></li></ul><p>技能应该服务任务，而不是让任务去迁就技能。</p><h3 level="3" id="一句话版推荐清单">一句话版推荐清单</h3><p>如果你现在就要开始，我给你的极简建议是：</p><p><strong>第一批：</strong></p><ul><li><p><code>skill-vetter</code></p></li><li><p><code>tavily-search</code></p></li><li><p><code>summarize</code></p></li><li><p><code>fetch</code></p></li><li><p><code>weather</code></p></li></ul><p><strong>第二批：</strong></p><ul><li><p><code>proactive-agent</code></p></li><li><p><code>self-improving-agent</code></p></li><li><p><code>ontology</code> / <code>agent-memory</code></p></li><li><p><code>filesystem</code></p></li><li><p><code>pdf</code></p></li></ul><p><strong>第三批：</strong></p><ul><li><p><code>github</code> 或 <code>gog</code></p></li><li><p><code>find-skills</code></p></li><li><p><code>python</code> / <code>shell</code></p></li><li><p><code>browser</code></p></li><li><p><code>notion</code> / <code>calendar</code> / <code>email</code> / <code>slack</code></p></li></ul><p>这样装，几乎不会错。</p><p>Skill核心用途更适合谁推荐优先级ClawHub 地址<code>tavily-search</code>联网搜索、查资料、验事实所有新手极高<code>https://clawhub.ai/arun-8687/tavily-searchontology</code> / <code>agent-memory</code>长期记忆、上下文连续长周期用户高<code>https://clawhub.ai/maverick-software/surrealdb-knowledge-graph-memory</code> / <code>https://clawhub.ai/kgnvsk/agent-memory-storeself-improving-agent</code>记录错误并持续优化想长期深用 Agent 的人高<code>https://clawhub.ai/pskoett/self-improving-agentproactive-agent</code>主动拆解和推进任务想提升执行感的人高<code>https://clawhub.ai/halthelobster/proactive-agentsummarize</code>总结网页、PDF、视频、音频内容与研究用户极高<code>https://clawhub.ai/steipete/summarizegithub</code>GitHub 协作、代码查询开发者高<code>https://clawhub.ai/steipete/githubgog</code>Gmail、Calendar、Drive、Docs 协同办公用户高<code>https://clawhub.ai/steipete/gogfind-skills</code>搜 Skill、选 Skill、扩展能力新手探索期高<code>https://clawhub.ai/JimLiuxinghai/find-skillsskill-vetter</code>安全审查、装前排雷所有新手极高<code>https://clawhub.ai/spclaudehome/skill-vetterweather</code>快速测试、建立正反馈所有新手中<code>https://clawhub.ai/steipete/weatherfilesystem</code>搜索、读取、整理本地文件文档重度用户中高<code>https://clawhub.ai/steipete/filesystemfetch</code>抓网页正文、取公开内容调研和采集用户中高<code>https://clawhub.ai/howtimeschange/markdown-fetchbrowser</code>打开动态网页、点击、翻页需要真实浏览器操作的人中高<code>https://clawhub.ai/lucaperret/browshpython</code>数据处理、脚本分析、转换数据与自动化用户高<code>https://clawhub.ai/steipete/pythonshell</code>系统命令、批处理、工具链串联开发者与效率用户高<code>https://clawhub.ai/steipete/shellnotion</code>知识库、数据库、项目同步内容与知识管理用户中高<code>https://clawhub.ai/steipete/notionslack</code>团队消息同步与提醒团队协作用户中<code>https://clawhub.ai/steipete/slackcalendar</code>日程创建、提醒、节奏安排办公与管理用户中高<code>https://clawhub.ai/NDCCCCCC/calendaremail</code>邮件阅读、总结、跟进高频邮件用户中高<code>https://clawhub.ai/porteden/porteden-emailpdf</code>提取 PDF 正文、表格和重点文档密集型用户中高<code>https://clawhub.ai/awspace/pdf</code></p><h3 level="3" id="最后">最后</h3><p></p><h1 level="1" id="Tavily-Web-Search">Tavily Web Search</h1><p>AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.</p><p>scripts/search.mjs</p><div class="llt-code readonly"><div class="language">ini</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment">#!/usr/bin/env node</span>
+
+function usage() {
+  console.error(`Usage: search.mjs &quot;query&quot; <span class="hljs-section" class="hljs-section">[-n 5]</span> <span class="hljs-section" class="hljs-section">[--deep]</span> <span class="hljs-section" class="hljs-section">[--topic general|news]</span> <span class="hljs-section" class="hljs-section">[--days 7]</span>`)<span class="hljs-comment" class="hljs-comment">;</span>
+  process.exit(2)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">args</span> = process.argv.slice(<span class="hljs-number" class="hljs-number">2</span>)<span class="hljs-comment" class="hljs-comment">;</span>
+if (<span class="hljs-attr" class="hljs-attr">args.length</span> === <span class="hljs-number" class="hljs-number">0</span> || args[<span class="hljs-number" class="hljs-number">0</span>] === <span class="hljs-string" class="hljs-string">&quot;-h&quot;</span> || args[<span class="hljs-number" class="hljs-number">0</span>] === <span class="hljs-string" class="hljs-string">&quot;--help&quot;</span>) usage()<span class="hljs-comment" class="hljs-comment">;</span>
+
+const <span class="hljs-attr" class="hljs-attr">query</span> = args[<span class="hljs-number" class="hljs-number">0</span>]<span class="hljs-comment" class="hljs-comment">;</span>
+let <span class="hljs-attr" class="hljs-attr">n</span> = <span class="hljs-number" class="hljs-number">5</span><span class="hljs-comment" class="hljs-comment">;</span>
+let <span class="hljs-attr" class="hljs-attr">searchDepth</span> = <span class="hljs-string" class="hljs-string">&quot;basic&quot;</span><span class="hljs-comment" class="hljs-comment">;</span>
+let <span class="hljs-attr" class="hljs-attr">topic</span> = <span class="hljs-string" class="hljs-string">&quot;general&quot;</span><span class="hljs-comment" class="hljs-comment">;</span>
+let <span class="hljs-attr" class="hljs-attr">days</span> = null<span class="hljs-comment" class="hljs-comment">;</span>
+
+for (let <span class="hljs-attr" class="hljs-attr">i</span> = <span class="hljs-number" class="hljs-number">1</span><span class="hljs-comment" class="hljs-comment">; i &lt; args.length; i++) {</span>
+  const <span class="hljs-attr" class="hljs-attr">a</span> = args[i]<span class="hljs-comment" class="hljs-comment">;</span>
+  if (<span class="hljs-attr" class="hljs-attr">a</span> === <span class="hljs-string" class="hljs-string">&quot;-n&quot;</span>) {
+    <span class="hljs-attr" class="hljs-attr">n</span> = Number.parseInt(args[i + <span class="hljs-number" class="hljs-number">1</span>] ?? <span class="hljs-string" class="hljs-string">&quot;5&quot;</span>, <span class="hljs-number" class="hljs-number">10</span>)<span class="hljs-comment" class="hljs-comment">;</span>
+    i++<span class="hljs-comment" class="hljs-comment">;</span>
+    continue<span class="hljs-comment" class="hljs-comment">;</span>
+  }
+  if (<span class="hljs-attr" class="hljs-attr">a</span> === <span class="hljs-string" class="hljs-string">&quot;--deep&quot;</span>) {
+    <span class="hljs-attr" class="hljs-attr">searchDepth</span> = <span class="hljs-string" class="hljs-string">&quot;advanced&quot;</span><span class="hljs-comment" class="hljs-comment">;</span>
+    continue<span class="hljs-comment" class="hljs-comment">;</span>
+  }
+  if (<span class="hljs-attr" class="hljs-attr">a</span> === <span class="hljs-string" class="hljs-string">&quot;--topic&quot;</span>) {
+    <span class="hljs-attr" class="hljs-attr">topic</span> = args[i + <span class="hljs-number" class="hljs-number">1</span>] ?? <span class="hljs-string" class="hljs-string">&quot;general&quot;</span><span class="hljs-comment" class="hljs-comment">;</span>
+    i++<span class="hljs-comment" class="hljs-comment">;</span>
+    continue<span class="hljs-comment" class="hljs-comment">;</span>
+  }
+  if (<span class="hljs-attr" class="hljs-attr">a</span> === <span class="hljs-string" class="hljs-string">&quot;--days&quot;</span>) {
+    <span class="hljs-attr" class="hljs-attr">days</span> = Number.parseInt(args[i + <span class="hljs-number" class="hljs-number">1</span>] ?? <span class="hljs-string" class="hljs-string">&quot;7&quot;</span>, <span class="hljs-number" class="hljs-number">10</span>)<span class="hljs-comment" class="hljs-comment">;</span>
+    i++<span class="hljs-comment" class="hljs-comment">;</span>
+    continue<span class="hljs-comment" class="hljs-comment">;</span>
+  }
+  console.error(`Unknown arg: ${a}`)<span class="hljs-comment" class="hljs-comment">;</span>
+  usage()<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">apiKey</span> = (process.env.TAVILY_API_KEY ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+if (!apiKey) {
+  console.error(&quot;Missing TAVILY_API_KEY&quot;)<span class="hljs-comment" class="hljs-comment">;</span>
+  process.exit(1)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">body</span> = {
+  api_key: apiKey,
+  query: query,
+  search_depth: searchDepth,
+  topic: topic,
+  max_results: Math.max(1, Math.min(n, 20)),
+  include_answer: true,
+  include_raw_content: false,
+}<span class="hljs-comment" class="hljs-comment">;</span>
+
+if (<span class="hljs-attr" class="hljs-attr">topic</span> === <span class="hljs-string" class="hljs-string">&quot;news&quot;</span> &amp;&amp; days) {
+  <span class="hljs-attr" class="hljs-attr">body.days</span> = days<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">resp</span> = await fetch(<span class="hljs-string" class="hljs-string">&quot;https://api.tavily.com/search&quot;</span>, {
+  method: &quot;POST&quot;,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+  },
+  body: JSON.stringify(body),
+})<span class="hljs-comment" class="hljs-comment">;</span>
+
+if (!resp.ok) {
+  const <span class="hljs-attr" class="hljs-attr">text</span> = await resp.text().catch(() =&gt; <span class="hljs-string" class="hljs-string">&quot;&quot;</span>)<span class="hljs-comment" class="hljs-comment">;</span>
+  throw new Error(`Tavily Search failed (${resp.status}): ${text}`)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">data</span> = await resp.json()<span class="hljs-comment" class="hljs-comment">;</span>
+
+// Print AI-generated answer if available
+if (data.answer) {
+  console.log(&quot;<span class="hljs-comment" class="hljs-comment">## Answer\n&quot;);</span>
+  console.log(data.answer)<span class="hljs-comment" class="hljs-comment">;</span>
+  console.log(&quot;\n---\n&quot;)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+// Print results
+const <span class="hljs-attr" class="hljs-attr">results</span> = (data.results ?? []).slice(<span class="hljs-number" class="hljs-number">0</span>, n)<span class="hljs-comment" class="hljs-comment">;</span>
+console.log(&quot;<span class="hljs-comment" class="hljs-comment">## Sources\n&quot;);</span>
+
+for (const r of results) {
+  const <span class="hljs-attr" class="hljs-attr">title</span> = String(r?.title ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+  const <span class="hljs-attr" class="hljs-attr">url</span> = String(r?.url ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+  const <span class="hljs-attr" class="hljs-attr">content</span> = String(r?.content ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+  const <span class="hljs-attr" class="hljs-attr">score</span> = r?.score ? ` (relevance: <span class="hljs-variable" class="hljs-variable">${(r.score * 100).toFixed(0)}</span>%)` : <span class="hljs-string" class="hljs-string">&quot;&quot;</span><span class="hljs-comment" class="hljs-comment">;</span>
+  
+  if (!title || !url) continue<span class="hljs-comment" class="hljs-comment">;</span>
+  console.log(`- **${title}**${score}`)<span class="hljs-comment" class="hljs-comment">;</span>
+  console.log(`  ${url}`)<span class="hljs-comment" class="hljs-comment">;</span>
+  if (content) {
+    console.log(`  ${content.slice(0, 300)}${content.length &gt; 300 ? &quot;...&quot; : &quot;&quot;}`)<span class="hljs-comment" class="hljs-comment">;</span>
+  }
+  console.log()<span class="hljs-comment" class="hljs-comment">;</span>
+}</code></pre></div></div><p>scripts/extract.mjs</p><div class="llt-code readonly"><div class="language">ini</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment">#!/usr/bin/env node</span>
+
+function usage() {
+  console.error(`Usage: extract.mjs &quot;url1&quot; <span class="hljs-section" class="hljs-section">[&quot;url2&quot; ...]</span>`)<span class="hljs-comment" class="hljs-comment">;</span>
+  process.exit(2)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">args</span> = process.argv.slice(<span class="hljs-number" class="hljs-number">2</span>)<span class="hljs-comment" class="hljs-comment">;</span>
+if (<span class="hljs-attr" class="hljs-attr">args.length</span> === <span class="hljs-number" class="hljs-number">0</span> || args[<span class="hljs-number" class="hljs-number">0</span>] === <span class="hljs-string" class="hljs-string">&quot;-h&quot;</span> || args[<span class="hljs-number" class="hljs-number">0</span>] === <span class="hljs-string" class="hljs-string">&quot;--help&quot;</span>) usage()<span class="hljs-comment" class="hljs-comment">;</span>
+
+const <span class="hljs-attr" class="hljs-attr">urls</span> = args.filter(a =&gt; !a.startsWith(<span class="hljs-string" class="hljs-string">&quot;-&quot;</span>))<span class="hljs-comment" class="hljs-comment">;</span>
+
+if (<span class="hljs-attr" class="hljs-attr">urls.length</span> === <span class="hljs-number" class="hljs-number">0</span>) {
+  console.error(&quot;No URLs provided&quot;)<span class="hljs-comment" class="hljs-comment">;</span>
+  usage()<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">apiKey</span> = (process.env.TAVILY_API_KEY ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+if (!apiKey) {
+  console.error(&quot;Missing TAVILY_API_KEY&quot;)<span class="hljs-comment" class="hljs-comment">;</span>
+  process.exit(1)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">resp</span> = await fetch(<span class="hljs-string" class="hljs-string">&quot;https://api.tavily.com/extract&quot;</span>, {
+  method: &quot;POST&quot;,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+  },
+  body: JSON.stringify({
+    api_key: apiKey,
+    urls: urls,
+  }),
+})<span class="hljs-comment" class="hljs-comment">;</span>
+
+if (!resp.ok) {
+  const <span class="hljs-attr" class="hljs-attr">text</span> = await resp.text().catch(() =&gt; <span class="hljs-string" class="hljs-string">&quot;&quot;</span>)<span class="hljs-comment" class="hljs-comment">;</span>
+  throw new Error(`Tavily Extract failed (${resp.status}): ${text}`)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+const <span class="hljs-attr" class="hljs-attr">data</span> = await resp.json()<span class="hljs-comment" class="hljs-comment">;</span>
+
+const <span class="hljs-attr" class="hljs-attr">results</span> = data.results ?? []<span class="hljs-comment" class="hljs-comment">;</span>
+const <span class="hljs-attr" class="hljs-attr">failed</span> = data.failed_results ?? []<span class="hljs-comment" class="hljs-comment">;</span>
+
+for (const r of results) {
+  const <span class="hljs-attr" class="hljs-attr">url</span> = String(r?.url ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+  const <span class="hljs-attr" class="hljs-attr">content</span> = String(r?.raw_content ?? <span class="hljs-string" class="hljs-string">&quot;&quot;</span>).trim()<span class="hljs-comment" class="hljs-comment">;</span>
+  
+  console.log(`<span class="hljs-comment" class="hljs-comment"># ${url}\n`);</span>
+  console.log(content || &quot;(no content extracted)&quot;)<span class="hljs-comment" class="hljs-comment">;</span>
+  console.log(&quot;\n---\n&quot;)<span class="hljs-comment" class="hljs-comment">;</span>
+}
+
+if (failed.length &gt; 0) {
+  console.log(&quot;<span class="hljs-comment" class="hljs-comment">## Failed URLs\n&quot;);</span>
+  for (const f of failed) {
+    console.log(`- ${f.url}: ${f.error}`)<span class="hljs-comment" class="hljs-comment">;</span>
+  }
+}</code></pre></div></div><p><a target="_blank" rel="noopener noreferrer nofollow" href="http://SKILL.md">SKILL.md</a></p><div class="llt-code readonly"><div class="language">sql</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment">---</span>
+name: tavily
+description: AI<span class="hljs-operator" class="hljs-operator">-</span>optimized web <span class="hljs-keyword" class="hljs-keyword">search</span> via Tavily API. <span class="hljs-keyword" class="hljs-keyword">Returns</span> concise, relevant results <span class="hljs-keyword" class="hljs-keyword">for</span> AI agents.
+homepage: https:<span class="hljs-operator" class="hljs-operator">/</span><span class="hljs-operator" class="hljs-operator">/</span>tavily.com
+metadata: {&quot;clawdbot&quot;:{&quot;emoji&quot;:&quot;🔍&quot;,&quot;requires&quot;:{&quot;bins&quot;:[&quot;node&quot;],&quot;env&quot;:[&quot;TAVILY_API_KEY&quot;]},&quot;primaryEnv&quot;:&quot;TAVILY_API_KEY&quot;}}
+<span class="hljs-comment" class="hljs-comment">---</span>
+
+# Tavily <span class="hljs-keyword" class="hljs-keyword">Search</span>
+
+AI<span class="hljs-operator" class="hljs-operator">-</span>optimized web <span class="hljs-keyword" class="hljs-keyword">search</span> <span class="hljs-keyword" class="hljs-keyword">using</span> Tavily API. Designed <span class="hljs-keyword" class="hljs-keyword">for</span> AI agents <span class="hljs-operator" class="hljs-operator">-</span> <span class="hljs-keyword" class="hljs-keyword">returns</span> clean, relevant content.
+
+## <span class="hljs-keyword" class="hljs-keyword">Search</span>
+
+```bash
+node {baseDir}<span class="hljs-operator" class="hljs-operator">/</span>scripts<span class="hljs-operator" class="hljs-operator">/</span>search.mjs &quot;query&quot;
+node {baseDir}<span class="hljs-operator" class="hljs-operator">/</span>scripts<span class="hljs-operator" class="hljs-operator">/</span>search.mjs &quot;query&quot; <span class="hljs-operator" class="hljs-operator">-</span>n <span class="hljs-number" class="hljs-number">10</span>
+node {baseDir}<span class="hljs-operator" class="hljs-operator">/</span>scripts<span class="hljs-operator" class="hljs-operator">/</span>search.mjs &quot;query&quot; <span class="hljs-comment" class="hljs-comment">--deep</span>
+node {baseDir}<span class="hljs-operator" class="hljs-operator">/</span>scripts<span class="hljs-operator" class="hljs-operator">/</span>search.mjs &quot;query&quot; <span class="hljs-comment" class="hljs-comment">--topic news</span>
+```
+
+## Options
+
+<span class="hljs-operator" class="hljs-operator">-</span> `<span class="hljs-operator" class="hljs-operator">-</span>n <span class="hljs-operator" class="hljs-operator">&lt;</span>count<span class="hljs-operator" class="hljs-operator">&gt;</span>`: Number <span class="hljs-keyword" class="hljs-keyword">of</span> results (<span class="hljs-keyword" class="hljs-keyword">default</span>: <span class="hljs-number" class="hljs-number">5</span>, max: <span class="hljs-number" class="hljs-number">20</span>)
+<span class="hljs-operator" class="hljs-operator">-</span> `<span class="hljs-comment" class="hljs-comment">--deep`: Use advanced search for deeper research (slower, more comprehensive)</span>
+<span class="hljs-operator" class="hljs-operator">-</span> `<span class="hljs-comment" class="hljs-comment">--topic &lt;topic&gt;`: Search topic - `general` (default) or `news`</span>
+<span class="hljs-operator" class="hljs-operator">-</span> `<span class="hljs-comment" class="hljs-comment">--days &lt;n&gt;`: For news topic, limit to last n days</span>
+
+## Extract content <span class="hljs-keyword" class="hljs-keyword">from</span> URL
+
+```bash
+node {baseDir}<span class="hljs-operator" class="hljs-operator">/</span>scripts<span class="hljs-operator" class="hljs-operator">/</span>extract.mjs &quot;https://example.com/article&quot;
+```
+
+Notes:
+<span class="hljs-operator" class="hljs-operator">-</span> Needs `TAVILY_API_KEY` <span class="hljs-keyword" class="hljs-keyword">from</span> https:<span class="hljs-operator" class="hljs-operator">/</span><span class="hljs-operator" class="hljs-operator">/</span>tavily.com
+<span class="hljs-operator" class="hljs-operator">-</span> Tavily <span class="hljs-keyword" class="hljs-keyword">is</span> optimized <span class="hljs-keyword" class="hljs-keyword">for</span> AI <span class="hljs-operator" class="hljs-operator">-</span> <span class="hljs-keyword" class="hljs-keyword">returns</span> clean, relevant snippets
+<span class="hljs-operator" class="hljs-operator">-</span> Use `<span class="hljs-comment" class="hljs-comment">--deep` for complex research questions</span>
+<span class="hljs-operator" class="hljs-operator">-</span> Use `<span class="hljs-comment" class="hljs-comment">--topic news` for current events</span>
+</code></pre></div></div><script type="module">const injectHtml = (root, html) => {
+  const iframe = document.createElement("iframe");
+  const htmlContent = `<html><head></head><body>${html}</body></html>`;
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.onload = () => {
+    const doc = iframe.contentDocument || iframe.contentWindow?.document;
+    if (!doc) {
+      return;
+    }
+    doc.open();
+    doc.write(htmlContent);
+    doc.close();
+  };
+  root.replaceChildren(iframe);
+}
+  document.querySelectorAll('.playground')?.forEach(el=>{
+    const html = el.getAttribute('data-html');
+    if (html) {
+      injectHtml(el,html);
+    }
+    const indicator = document.createElement("div");
+    indicator.className = "indicator";
+    const showCode = document.createElement("div");
+    showCode.className = "show-code";
+    showCode.innerText = "code";
+    showCode.onclick = () => {
+      el.parentElement.classList.remove("preview-only");
+    };
+    const showPreview = document.createElement("div");
+    showPreview.className = "show-preview";
+    showPreview.innerText = "preview";
+    showPreview.onclick = () => {
+      el.parentElement.classList.add("preview-only");
+    };
+    indicator.appendChild(showCode);
+    indicator.appendChild(showPreview);
+    el.parentElement.appendChild(indicator);
+    if (window.screen.width < 768) {
+      showPreview.click();
+    }
+  });</script></div> <div data-page-id="openclaw-skills-httpsclawhubai" class="navigator flex justify-between items-center mt-4 py-4"> <a href="/post/GitHub-Copilot-" class="flex items-center gap-1 text-blue cursor-pointer flex-[45%]"> <div class="i-ri:arrow-left-double-line w-5 h-5 flex-shrink-0"></div> <div class="text-start">GitHub Copilot </div> </a> <div></div> </div> </div> <div class="outline-wrapper"></div> </main>  <footer class="site-footer" data-astro-cid-sz7xmlte> <!-- 导航链接 --> <nav class="footer-nav" data-astro-cid-sz7xmlte>  <a href="/" class="footer-link" data-astro-cid-sz7xmlte> Home </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tag/projects" class="footer-link" data-astro-cid-sz7xmlte> Projects </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tools" class="footer-link" data-astro-cid-sz7xmlte> Notes </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="https://web.chatboxai.app/" class="footer-link" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> Chatbox </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/about" class="footer-link" data-astro-cid-sz7xmlte> About </a>  </nav> <!-- 分割线 --> <div class="footer-divider" data-astro-cid-sz7xmlte></div> <!-- 版权信息 --> <div class="footer-copyright" data-astro-cid-sz7xmlte> <a href="https://asharebox.github.io" data-astro-cid-sz7xmlte>©  asharebox  ·  since 2026    ·</a> <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer" title="RSS Feed" data-astro-cid-sz7xmlte> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" aria-label="RSS Feed" data-astro-cid-sz7xmlte> <rect width="256" height="256" rx="28" fill="#ff6b35" data-astro-cid-sz7xmlte></rect> <circle cx="68" cy="189" r="24" fill="#fff" data-astro-cid-sz7xmlte></circle> <path d="M160 213h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#fff" data-astro-cid-sz7xmlte></path> <path d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z" fill="#fff" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </footer>  <!-- ★ 添加回到顶部按钮组件 --> <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-astro-cid-wlspcwf4> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-wlspcwf4> <path d="M18 15l-6-6-6 6" data-astro-cid-wlspcwf4></path> </svg> </button>   </body></html>
