@@ -1,0 +1,50 @@
+<!DOCTYPE html> <html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="asharebox"><meta name="msapplication-TileColor" content="#1e2030"><meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"><meta name="description" content="关于OpenClaw安全应用的风险提示"><link rel="icon" href="/favicon.ico"><title>openclaw security risk | asharebox</title><link rel="stylesheet" href="/_astro/_page_.Q94QMkaZ.css">
+<style>.outlines a[data-anchor-tag=H1]{margin-left:0}.outlines a[data-anchor-tag=H2]{margin-left:12px}.outlines a[data-anchor-tag=H3]{margin-left:24px}.outlines a[data-anchor-tag=H4]{margin-left:36px}.outlines a[data-anchor-tag=H5]{margin-left:48px}.outlines a[data-anchor-tag=H6]{margin-left:60px}
+._tabset_selm3_1 ._tab-panel_selm3_1{display:none}._tabset_selm3_1 ._tab-panels_selm3_4{display:flex}._tabset_selm3_1 input[data-tab-name=direct]{display:none}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=direct]{display:block}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-labels_selm3_13 label[data-tab-name=direct]{border-bottom:2px solid red}._tabset_selm3_1 input[data-tab-name=app]{display:none}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=app]{display:block}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-labels_selm3_13 label[data-tab-name=app]{border-bottom:2px solid red}
+</style>
+<link rel="stylesheet" href="/_astro/_page_.ypUYv9mY.css">
+<link rel="stylesheet" href="/_astro/_id_.CdoHgwyN.css"><script type="module" src="/_astro/hoisted.DwDDK78S.js"></script></head> <body class="min-h-screen"> <header class="flex justify-between items-center px-4 py-3 border-b" style="border-color: #292e42;"> <a href="/" class="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity" style="color: #c8d3f5;"> asharebox </a> <div class="flex items-center gap-3">   <div id="auth"></div> </div> </header>  <main> <div class="content"> <div class="w-full flex gap-2 pb-2">  <a href="/tag/Tools" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#Tools </a><a href="/tag/openclaw" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#openclaw </a><a href="/tag/nanobot" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#nanobot </a> </div> <div class="ud-root read-only flex-1"><h1 level="1" id="openclaw-security-risk">openclaw security risk</h1><p><strong>关于OpenClaw安全应用的风险提示</strong></p><p>  OpenClaw依据自然语言指令直接操控计算机完成相关操作。为实现“自主执行任务”的能力，该应用被授予了较高的系统权限，包括访问本地文件系统、读取环境变量、调用外部服务应用程序编程接口（API）以及安装扩展功能等。然而，由于其默认的安全配置极为脆弱，攻击者一旦发现突破口，便能轻易获取系统的完全控制权。</p><p>  由于OpenClaw智能体的不当安装和使用，已经出现了一些严重的安全风险：</p><p>  1.“提示词注入”风险。网络攻击者通过在网页中构造隐藏的恶意指令，诱导OpenClaw读取该网页，就可能导致其被诱导将用户系统密钥泄露。</p><p>  2. “误操作”风险。由于错误的理解用户操作指令和意图，OpenClaw可能会将电子邮件、核心生产数据等重要信息彻底删除。</p><p>  3.功能插件（skills）投毒风险。多个适用于OpenClaw的功能插件已被确认为恶意插件或存在潜在的安全风险，安装后可执行窃取密钥、部署木马后门软件等恶意操作，使得设备沦为“肉鸡”。</p><p>  4.安全漏洞风险。截止目前，OpenClaw已经公开曝出多个高中危漏洞，一旦这些漏洞被网络攻击者恶意利用，则可能导致系统被控、隐私信息和敏感数据泄露的严重后果。对于个人用户，可导致隐私数据（像照片、文档、聊天记录）、支付账户、API密钥等敏感信息遭窃取。对于金融、能源等关键行业，可导致核心业务数据、商业机密和代码仓库泄露，甚至会使整个业务系统陷入瘫痪，造成难以估量的损失。</p><p>  建议相关单位和个人用户在部署和应用OpenClaw时，采取以下安全措施：</p><p>  1.强化网络控制，不将OpenClaw默认管理端口直接暴露在公网上，通过身份认证、访问控制等安全控制措施对访问服务进行安全管理。对运行环境进行严格隔离，使用容器等技术限制OpenClaw权限过高问题；</p><p>  2.加强凭证管理，避免在环境变量中明文存储密钥；建立完整的操作日志审计机制；</p><p>  3.严格管理插件来源，禁用自动更新功能，仅从可信渠道安装经过签名验证的扩展程序。</p><p>  4.持续关注补丁和安全更新，及时进行版本更新和安装安全补丁。</p><p></p><script type="module">const injectHtml = (root, html) => {
+  const iframe = document.createElement("iframe");
+  const htmlContent = `<html><head></head><body>${html}</body></html>`;
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.onload = () => {
+    const doc = iframe.contentDocument || iframe.contentWindow?.document;
+    if (!doc) {
+      return;
+    }
+    doc.open();
+    doc.write(htmlContent);
+    doc.close();
+  };
+  root.replaceChildren(iframe);
+}
+  document.querySelectorAll('.playground')?.forEach(el=>{
+    const html = el.getAttribute('data-html');
+    if (html) {
+      injectHtml(el,html);
+    }
+    const indicator = document.createElement("div");
+    indicator.className = "indicator";
+    const showCode = document.createElement("div");
+    showCode.className = "show-code";
+    showCode.innerText = "code";
+    showCode.onclick = () => {
+      el.parentElement.classList.remove("preview-only");
+    };
+    const showPreview = document.createElement("div");
+    showPreview.className = "show-preview";
+    showPreview.innerText = "preview";
+    showPreview.onclick = () => {
+      el.parentElement.classList.add("preview-only");
+    };
+    indicator.appendChild(showCode);
+    indicator.appendChild(showPreview);
+    el.parentElement.appendChild(indicator);
+    if (window.screen.width < 768) {
+      showPreview.click();
+    }
+  });</script></div> <div data-page-id="openclaw-security-risk" class="navigator flex justify-between items-center mt-4 py-4"> <a href="/post/cloude-code-skills" class="flex items-center gap-1 text-blue cursor-pointer flex-[45%]"> <div class="i-ri:arrow-left-double-line w-5 h-5 flex-shrink-0"></div> <div class="text-start">10 cloude code skills</div> </a> <div></div> </div> </div> <div class="outline-wrapper"></div> </main>  <footer class="site-footer" data-astro-cid-sz7xmlte> <!-- 导航链接 --> <nav class="footer-nav" data-astro-cid-sz7xmlte>  <a href="/" class="footer-link" data-astro-cid-sz7xmlte> Home </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tag/projects" class="footer-link" data-astro-cid-sz7xmlte> Projects </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tools" class="footer-link" data-astro-cid-sz7xmlte> Notes </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="https://web.chatboxai.app/" class="footer-link" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> Chatbox </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/about" class="footer-link" data-astro-cid-sz7xmlte> About </a>  </nav> <!-- 分割线 --> <div class="footer-divider" data-astro-cid-sz7xmlte></div> <!-- 版权信息 --> <div class="footer-copyright" data-astro-cid-sz7xmlte> <a href="https://asharebox.github.io" data-astro-cid-sz7xmlte>©  asharebox  ·  since 2026    ·</a> <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer" title="RSS Feed" data-astro-cid-sz7xmlte> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" aria-label="RSS Feed" data-astro-cid-sz7xmlte> <rect width="256" height="256" rx="28" fill="#ff6b35" data-astro-cid-sz7xmlte></rect> <circle cx="68" cy="189" r="24" fill="#fff" data-astro-cid-sz7xmlte></circle> <path d="M160 213h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#fff" data-astro-cid-sz7xmlte></path> <path d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z" fill="#fff" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </footer>  <!-- ★ 添加回到顶部按钮组件 --> <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-astro-cid-wlspcwf4> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-wlspcwf4> <path d="M18 15l-6-6-6 6" data-astro-cid-wlspcwf4></path> </svg> </button>   </body></html>
