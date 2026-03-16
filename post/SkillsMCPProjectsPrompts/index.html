@@ -1,0 +1,282 @@
+<!DOCTYPE html> <html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="asharebox"><meta name="msapplication-TileColor" content="#1e2030"><meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"><meta name="description" content="Prompt 就是你给 AI 的指令，告诉它你想要什么。"><link rel="icon" href="/favicon.ico"><title>Skills、MCP、Projects、Prompts | asharebox</title><link rel="stylesheet" href="/_astro/_page_.Q94QMkaZ.css">
+<style>.outlines a[data-anchor-tag=H1]{margin-left:0}.outlines a[data-anchor-tag=H2]{margin-left:12px}.outlines a[data-anchor-tag=H3]{margin-left:24px}.outlines a[data-anchor-tag=H4]{margin-left:36px}.outlines a[data-anchor-tag=H5]{margin-left:48px}.outlines a[data-anchor-tag=H6]{margin-left:60px}
+._tabset_selm3_1 ._tab-panel_selm3_1{display:none}._tabset_selm3_1 ._tab-panels_selm3_4{display:flex}._tabset_selm3_1 input[data-tab-name=direct]{display:none}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=direct]{display:block}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-labels_selm3_13 label[data-tab-name=direct]{border-bottom:2px solid red}._tabset_selm3_1 input[data-tab-name=app]{display:none}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=app]{display:block}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-labels_selm3_13 label[data-tab-name=app]{border-bottom:2px solid red}
+</style>
+<link rel="stylesheet" href="/_astro/_page_.ypUYv9mY.css">
+<link rel="stylesheet" href="/_astro/_id_.CdoHgwyN.css"><script type="module" src="/_astro/hoisted.DwDDK78S.js"></script></head> <body class="min-h-screen"> <header class="flex justify-between items-center px-4 py-3 border-b" style="border-color: #292e42;"> <a href="/" class="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity" style="color: #c8d3f5;"> asharebox </a> <div class="flex items-center gap-3">   <div id="auth"></div> </div> </header>  <main> <div class="content"> <div class="w-full flex gap-2 pb-2">  <a href="/tag/Tools" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#Tools </a><a href="/tag/aiskills" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#aiskills </a><a href="/tag/Cloude%20code" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#Cloude code </a> </div> <div class="ud-root read-only flex-1"><h1 level="1" id="SkillsMCPProjectsPrompts">Skills、MCP、Projects、Prompts</h1><blockquote><h3 level="3" id="古法编程纯手工">古法编程纯手工:</h3><p>这四个概念相互关联：Prompt指导AI，Skill提供能力，MCP整合工具，Projects保存经验。Projects是AI的记忆系统，保存项目历史、配置和数据，便于复用和团队协作，与Skill的区别在于更注重长期积累而非即时功能。</p></blockquote><h2 level="2" id="PromptAI-的说明书">Prompt：AI 的「说明书」</h2><h3 level="3" id="21-什么是-Prompt">2.1 什么是 Prompt？</h3><p>Prompt 就是你给 AI 的指令，告诉它你想要什么。</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown"><span class="hljs-section" class="hljs-section"># 简单 Prompt</span>
+帮我写一个 React 组件
+
+<span class="hljs-section" class="hljs-section"># 复杂 Prompt</span>
+你是一个资深的 React 开发者，精通 TypeScript 和性能优化。
+请帮我写一个用户列表组件，要求：
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 使用 TypeScript
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 支持分页
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 支持搜索
+<span class="hljs-bullet" class="hljs-bullet">4.</span> 使用 React Query
+<span class="hljs-bullet" class="hljs-bullet">5.</span> 注重性能优化
+...
+</code></pre></div></div><h3 level="3" id="22-Prompt-的问题">2.2 Prompt 的问题</h3><p><strong>问题 1：每次都要重复</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code class="language-bash"><span class="hljs-comment" class="hljs-comment"># 今天</span>
+你是一个资深的 React 开发者...（100 行）
+
+<span class="hljs-comment" class="hljs-comment"># 明天</span>
+你是一个资深的 React 开发者...（100 行，又来一遍）
+</code></pre></div></div><p><strong>问题 2：容易遗漏</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code class="language-bash"><span class="hljs-comment" class="hljs-comment"># 第一次</span>
+记得加 TypeScript 类型、错误处理、loading 状态
+
+<span class="hljs-comment" class="hljs-comment"># 第二次</span>
+忘了写，AI 生成的代码没有错误处理
+</code></pre></div></div><p><strong>问题 3：难以维护</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code class="language-bash"><span class="hljs-comment" class="hljs-comment"># 一个月后</span>
+这个 Prompt 为什么要这样写？
+能删掉这条规则吗？
+不知道，不敢动
+</code></pre></div></div><h3 level="3" id="23-Prompt-的适用场景">2.3 Prompt 的适用场景</h3><p>✅ <strong>适合</strong>：</p><ul><li><p>一次性任务</p></li><li><p>简单需求</p></li><li><p>快速验证</p></li></ul><p>❌ <strong>不适合</strong>：</p><ul><li><p>重复任务</p></li><li><p>复杂规则</p></li><li><p>团队协作</p></li></ul><h2 level="2" id="三Skill可复用的专家">三、Skill：可复用的「专家」</h2><h3 level="3" id="31-什么是-Skill">3.1 什么是 Skill？</h3><p>Skill 是把 Prompt 封装成可复用的模块，就像给 AI 安装一个「专家插件」。</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">&lt;!-- .cursor/skills/react-expert/SKILL.md --&gt;
+<span class="hljs-section" class="hljs-section"># React Expert Skill</span>
+
+你是一个资深的 React 开发者，精通：
+<span class="hljs-bullet" class="hljs-bullet">-</span> TypeScript
+<span class="hljs-bullet" class="hljs-bullet">-</span> React Hooks
+<span class="hljs-bullet" class="hljs-bullet">-</span> 性能优化
+<span class="hljs-bullet" class="hljs-bullet">-</span> 测试
+
+<span class="hljs-section" class="hljs-section">## 代码规范</span>
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 使用函数式组件
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 优先使用 TypeScript
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 遵循 Airbnb 代码规范
+...
+
+<span class="hljs-section" class="hljs-section">## 性能优化</span>
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 事件处理函数用 useCallback
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 复杂计算用 useMemo
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 纯展示组件用 React.memo
+...
+</code></pre></div></div><h3 level="3" id="32-Skill-的优势">3.2 Skill 的优势</h3><p><strong>优势 1：一次编写，到处使用</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code class="language-bash"><span class="hljs-comment" class="hljs-comment"># 使用 Skill</span>
+/react-expert 写一个用户列表组件
+/react-expert 写一个订单列表组件
+/react-expert 写一个商品列表组件
+</code></pre></div></div><p><strong>优势 2：效果稳定</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code class="language-bash"><span class="hljs-comment" class="hljs-comment"># 每次都应用相同的规则</span>
+✅ TypeScript
+✅ 性能优化
+✅ 错误处理
+✅ 代码规范
+</code></pre></div></div><p><strong>优势 3：易于维护</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">&lt;!-- 更新 Skill --&gt;
+<span class="hljs-section" class="hljs-section">## 性能优化</span>
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 事件处理函数用 useCallback
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 复杂计算用 useMemo
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 纯展示组件用 React.memo
+<span class="hljs-bullet" class="hljs-bullet">4.</span> 长列表用虚拟滚动  ← 新增规则
+</code></pre></div></div><p>所有使用这个 Skill 的地方都会自动应用新规则。</p><p><strong>优势 4：团队共享</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code class="language-bash"><span class="hljs-comment" class="hljs-comment"># 团队共享 Skill 库</span>
+git <span class="hljs-built_in" class="hljs-built_in">clone</span> https://github.com/company/cursor-skills.git
+<span class="hljs-built_in" class="hljs-built_in">cp</span> -r cursor-skills/.cursor/skills ~/.cursor/skills
+
+<span class="hljs-comment" class="hljs-comment"># 所有人都能用</span>
+/react-expert
+/vue-expert
+/node-expert
+</code></pre></div></div><h3 level="3" id="33-Skill-vs-Prompt">3.3 Skill vs Prompt</h3><p>维度PromptSkill复用性复制粘贴直接调用维护性难以维护集中维护一致性容易遗漏始终一致团队协作难以共享易于共享学习曲线低中</p><h2 level="2" id="四MCPAI-的工具箱">四、MCP：AI 的「工具箱」</h2><h3 level="3" id="41-什么是-MCP">4.1 什么是 MCP？</h3><p>MCP（Model Context Protocol）是 Anthropic 推出的协议，让 AI 能够调用外部工具。</p><p><strong>类比</strong>：</p><ul><li><p>Prompt/Skill：告诉 AI「怎么做」</p></li><li><p>MCP：给 AI「工具」，让它自己做</p></li></ul><h3 level="3" id="42-MCP-的工作原理">4.2 MCP 的工作原理</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">arduino</div><div class="wrapper"><pre><code class="language-arduino">用户：帮我查一下今天的天气
+
+AI：好的，我需要调用天气 API
+    ↓
+MCP <span class="hljs-built_in" class="hljs-built_in">Server</span>：调用 weather API
+    ↓
+返回：北京，晴，<span class="hljs-number" class="hljs-number">25</span>°C
+    ↓
+AI：今天北京天气晴朗，温度 <span class="hljs-number" class="hljs-number">25</span>°C
+</code></pre></div></div><h3 level="3" id="43-MCP-的应用场景">4.3 MCP 的应用场景</h3><p><strong>场景 1：文件操作</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">用户：帮我创建一个 React 项目
+
+AI：
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 调用 MCP 的 filesystem 工具
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 创建目录结构
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 生成配置文件
+<span class="hljs-bullet" class="hljs-bullet">4.</span> 安装依赖
+</code></pre></div></div><p><strong>场景 2：数据库查询</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">用户：查询最近 7 天的订单数据
+
+AI：
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 调用 MCP 的 database 工具
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 执行 SQL 查询
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 返回结果
+<span class="hljs-bullet" class="hljs-bullet">4.</span> 生成报表
+</code></pre></div></div><p><strong>场景 3：API 调用</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">用户：帮我发一条推特
+
+AI：
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 调用 MCP 的 twitter 工具
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 发送推文
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 返回推文链接
+</code></pre></div></div><h3 level="3" id="44-MCP-的配置">4.4 MCP 的配置</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">json</div><div class="wrapper"><pre><code class="language-json"><span class="hljs-comment" class="hljs-comment">// .cursor/mcp.json</span>
+<span class="hljs-punctuation" class="hljs-punctuation">{</span>
+  <span class="hljs-attr" class="hljs-attr">&quot;mcpServers&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">{</span>
+    <span class="hljs-attr" class="hljs-attr">&quot;filesystem&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">{</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-string" class="hljs-string">&quot;npx&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">[</span><span class="hljs-string" class="hljs-string">&quot;-y&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span> <span class="hljs-string" class="hljs-string">&quot;@modelcontextprotocol/server-filesystem&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span> <span class="hljs-string" class="hljs-string">&quot;/path/to/workspace&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation" class="hljs-punctuation">}</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+    <span class="hljs-attr" class="hljs-attr">&quot;database&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">{</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-string" class="hljs-string">&quot;npx&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">[</span><span class="hljs-string" class="hljs-string">&quot;-y&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span> <span class="hljs-string" class="hljs-string">&quot;@modelcontextprotocol/server-postgres&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">]</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;env&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">{</span>
+        <span class="hljs-attr" class="hljs-attr">&quot;DATABASE_URL&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-string" class="hljs-string">&quot;postgresql://user:pass@localhost:5432/db&quot;</span>
+      <span class="hljs-punctuation" class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation" class="hljs-punctuation">}</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+    <span class="hljs-attr" class="hljs-attr">&quot;github&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">{</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-string" class="hljs-string">&quot;npx&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">[</span><span class="hljs-string" class="hljs-string">&quot;-y&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">,</span> <span class="hljs-string" class="hljs-string">&quot;@modelcontextprotocol/server-github&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">]</span><span class="hljs-punctuation" class="hljs-punctuation">,</span>
+      <span class="hljs-attr" class="hljs-attr">&quot;env&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-punctuation" class="hljs-punctuation">{</span>
+        <span class="hljs-attr" class="hljs-attr">&quot;GITHUB_TOKEN&quot;</span><span class="hljs-punctuation" class="hljs-punctuation">:</span> <span class="hljs-string" class="hljs-string">&quot;your-token&quot;</span>
+      <span class="hljs-punctuation" class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation" class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation" class="hljs-punctuation">}</span>
+<span class="hljs-punctuation" class="hljs-punctuation">}</span>
+</code></pre></div></div><h3 level="3" id="45-MCP-vs-API">4.5 MCP vs API</h3><p>维度传统 APIMCP调用方式手动编码AI 自动调用错误处理手动处理AI 自动重试参数构造手动构造AI 自动推断结果解析手动解析AI 自动理解</p><h2 level="2" id="五ProjectsAI-的记忆">五、Projects：AI 的「记忆」</h2><h3 level="3" id="51-什么是-Projects">5.1 什么是 Projects？</h3><p>Projects 是 Cursor 的新功能，让 AI 记住项目的上下文。</p><p><strong>类比</strong>：</p><ul><li><p>Prompt：一次性对话</p></li><li><p>Skill：可复用的规则</p></li><li><p>MCP：可调用的工具</p></li><li><p>Projects：持久化的记忆</p></li></ul><h3 level="3" id="52-Projects-的作用">5.2 Projects 的作用</h3><p><strong>作用 1：记住项目结构</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown"><span class="hljs-section" class="hljs-section"># 第一次对话</span>
+用户：这个项目的目录结构是什么？
+AI：（扫描项目）
+<span class="hljs-code" class="hljs-code">    src/
+    ├── components/
+    ├── pages/
+    ├── utils/
+    └── types/
+</span>
+<span class="hljs-section" class="hljs-section"># 第二次对话（几天后）</span>
+用户：帮我在 components 目录下创建一个新组件
+AI：好的，我记得 components 目录在 src 下
+</code></pre></div></div><p><strong>作用 2：记住代码风格</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown"><span class="hljs-section" class="hljs-section"># AI 分析项目后</span>
+<span class="hljs-bullet" class="hljs-bullet">-</span> 使用 TypeScript
+<span class="hljs-bullet" class="hljs-bullet">-</span> 使用函数式组件
+<span class="hljs-bullet" class="hljs-bullet">-</span> 使用 Tailwind CSS
+<span class="hljs-bullet" class="hljs-bullet">-</span> 使用 React Query
+
+<span class="hljs-section" class="hljs-section"># 之后生成的代码都会遵循这些风格</span>
+</code></pre></div></div><p><strong>作用 3：记住业务逻辑</strong></p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown"><span class="hljs-section" class="hljs-section"># AI 分析项目后</span>
+<span class="hljs-bullet" class="hljs-bullet">-</span> 用户认证使用 JWT
+<span class="hljs-bullet" class="hljs-bullet">-</span> API 基础 URL 是 /api/v1
+<span class="hljs-bullet" class="hljs-bullet">-</span> 错误处理使用 toast 提示
+<span class="hljs-bullet" class="hljs-bullet">-</span> 表单验证使用 Zod
+
+<span class="hljs-section" class="hljs-section"># 之后生成的代码都会遵循这些逻辑</span>
+</code></pre></div></div><h3 level="3" id="53-Projects-的配置">5.3 Projects 的配置</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">&lt;!-- .cursor/projects/my-project.md --&gt;
+<span class="hljs-section" class="hljs-section"># My Project</span>
+
+<span class="hljs-section" class="hljs-section">## 项目信息</span>
+<span class="hljs-bullet" class="hljs-bullet">-</span> 名称：电商管理系统
+<span class="hljs-bullet" class="hljs-bullet">-</span> 技术栈：React + TypeScript + Tailwind CSS
+<span class="hljs-bullet" class="hljs-bullet">-</span> 状态管理：Zustand
+<span class="hljs-bullet" class="hljs-bullet">-</span> 数据请求：React Query
+
+<span class="hljs-section" class="hljs-section">## 目录结构</span>
+src/
+├── components/  # 通用组件
+├── pages/       # 页面组件
+├── hooks/       # 自定义 Hooks
+├── utils/       # 工具函数
+├── types/       # TypeScript 类型
+└── api/         # API 接口
+
+<span class="hljs-section" class="hljs-section">## 代码规范</span>
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 组件使用函数式组件
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 所有 props 都要定义类型
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 使用 Tailwind CSS，不写内联样式
+<span class="hljs-bullet" class="hljs-bullet">4.</span> API 调用使用 React Query
+
+<span class="hljs-section" class="hljs-section">## 业务规则</span>
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 用户认证使用 JWT
+<span class="hljs-bullet" class="hljs-bullet">2.</span> Token 存储在 localStorage
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 未登录跳转到 /login
+<span class="hljs-bullet" class="hljs-bullet">4.</span> 错误提示使用 toast
+</code></pre></div></div><h3 level="3" id="54-Projects-vs-Skill">5.4 Projects vs Skill</h3><p>维度SkillProjects作用域通用规则项目特定内容编码规范项目上下文复用性跨项目单项目维护手动更新AI 自动学习</p><h2 level="2" id="六四者的关系">六、四者的关系</h2><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><p><strong>组合使用</strong>：</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">用户：/react-expert 帮我在这个项目中创建一个用户管理模块
+
+AI 的工作流程：
+<span class="hljs-bullet" class="hljs-bullet">1.</span> 读取 Projects：了解项目结构和规范
+<span class="hljs-bullet" class="hljs-bullet">2.</span> 应用 Skill：使用 React Expert 的规则
+<span class="hljs-bullet" class="hljs-bullet">3.</span> 调用 MCP：创建文件、安装依赖
+<span class="hljs-bullet" class="hljs-bullet">4.</span> 生成代码：符合项目规范的代码
+</code></pre></div></div><h2 level="2" id="七实战案例">七、实战案例</h2><h3 level="3" id="71-案例-1从零搭建项目">7.1 案例 1：从零搭建项目</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown"><span class="hljs-section" class="hljs-section"># 1. 创建 Project</span>
+用户：创建一个电商管理系统项目
+
+AI：
+<span class="hljs-bullet" class="hljs-bullet">-</span> 调用 MCP filesystem 创建目录
+<span class="hljs-bullet" class="hljs-bullet">-</span> 生成 package.json
+<span class="hljs-bullet" class="hljs-bullet">-</span> 安装依赖
+<span class="hljs-bullet" class="hljs-bullet">-</span> 创建 Projects 配置
+
+<span class="hljs-section" class="hljs-section"># 2. 使用 Skill 生成代码</span>
+用户：/react-expert 创建用户管理模块
+
+AI：
+<span class="hljs-bullet" class="hljs-bullet">-</span> 读取 Projects 了解项目结构
+<span class="hljs-bullet" class="hljs-bullet">-</span> 应用 Skill 的规则
+<span class="hljs-bullet" class="hljs-bullet">-</span> 生成符合规范的代码
+
+<span class="hljs-section" class="hljs-section"># 3. 持续开发</span>
+用户：添加订单管理模块
+
+AI：
+<span class="hljs-bullet" class="hljs-bullet">-</span> 参考用户管理模块的风格
+<span class="hljs-bullet" class="hljs-bullet">-</span> 保持一致性
+<span class="hljs-bullet" class="hljs-bullet">-</span> 自动应用相同的规范
+</code></pre></div></div><h3 level="3" id="72-案例-2团队协作">7.2 案例 2：团队协作</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown"><span class="hljs-section" class="hljs-section"># 团队 Skill 库</span>
+.cursor/skills/
+├── react-expert/
+├── vue-expert/
+├── node-expert/
+├── testing-expert/
+└── security-expert/
+
+<span class="hljs-section" class="hljs-section"># 项目 Projects 配置</span>
+.cursor/projects/
+├── frontend.md
+├── backend.md
+└── mobile.md
+
+<span class="hljs-section" class="hljs-section"># MCP 工具</span>
+.cursor/mcp.json
+<span class="hljs-bullet" class="hljs-bullet">-</span> filesystem
+<span class="hljs-bullet" class="hljs-bullet">-</span> database
+<span class="hljs-bullet" class="hljs-bullet">-</span> github
+<span class="hljs-bullet" class="hljs-bullet">-</span> slack
+</code></pre></div></div><p>团队成员可以：</p><ol><li><p>共享 Skill 库（统一规范）</p></li><li><p>共享 Projects 配置（统一上下文）</p></li><li><p>共享 MCP 工具（统一工具链）</p></li></ol><h2 level="2" id="八总结">八、总结</h2><p>AI 开发的四大概念：</p><p><strong>Prompt</strong>：</p><ul><li><p>基础的指令</p></li><li><p>适合一次性任务</p></li><li><p>难以复用和维护</p></li></ul><p><strong>Skill</strong>：</p><ul><li><p>可复用的专家</p></li><li><p>适合重复任务</p></li><li><p>易于维护和共享</p></li></ul><p><strong>MCP</strong>：</p><ul><li><p>可调用的工具</p></li><li><p>让 AI 能操作外部系统</p></li><li><p>扩展 AI 的能力</p></li></ul><p><strong>Projects</strong>：</p><ul><li><p>持久化的上下文</p></li><li><p>让 AI 记住项目信息</p></li><li><p>保持代码一致性</p></li></ul><p><strong>使用建议</strong>：</p><ol><li><p>基础任务：Prompt</p></li><li><p>重复任务：Skill</p></li><li><p>外部操作：MCP</p></li><li><p>项目开发：Projects</p></li></ol><p><strong>组合使用</strong>：</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code class="language-markdown">Projects（项目上下文）
+<span class="hljs-bullet" class="hljs-bullet">  +</span> Skill（编码规范）
+<span class="hljs-bullet" class="hljs-bullet">  +</span> MCP（工具调用）
+  = 高效的 AI 开发
+
+</code></pre></div></div><script type="module">const injectHtml = (root, html) => {
+  const iframe = document.createElement("iframe");
+  const htmlContent = `<html><head></head><body>${html}</body></html>`;
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.onload = () => {
+    const doc = iframe.contentDocument || iframe.contentWindow?.document;
+    if (!doc) {
+      return;
+    }
+    doc.open();
+    doc.write(htmlContent);
+    doc.close();
+  };
+  root.replaceChildren(iframe);
+}
+  document.querySelectorAll('.playground')?.forEach(el=>{
+    const html = el.getAttribute('data-html');
+    if (html) {
+      injectHtml(el,html);
+    }
+    const indicator = document.createElement("div");
+    indicator.className = "indicator";
+    const showCode = document.createElement("div");
+    showCode.className = "show-code";
+    showCode.innerText = "code";
+    showCode.onclick = () => {
+      el.parentElement.classList.remove("preview-only");
+    };
+    const showPreview = document.createElement("div");
+    showPreview.className = "show-preview";
+    showPreview.innerText = "preview";
+    showPreview.onclick = () => {
+      el.parentElement.classList.add("preview-only");
+    };
+    indicator.appendChild(showCode);
+    indicator.appendChild(showPreview);
+    el.parentElement.appendChild(indicator);
+    if (window.screen.width < 768) {
+      showPreview.click();
+    }
+  });</script></div> <div data-page-id="SkillsMCPProjectsPrompts" class="navigator flex justify-between items-center mt-4 py-4"> <a href="/post/Openclaw自己操作Claude" class="flex items-center gap-1 text-blue cursor-pointer flex-[45%]"> <div class="i-ri:arrow-left-double-line w-5 h-5 flex-shrink-0"></div> <div class="text-start">Openclaw自己操作Claude</div> </a> <div></div> </div> </div> <div class="outline-wrapper"></div> </main>  <footer class="site-footer" data-astro-cid-sz7xmlte> <!-- 导航链接 --> <nav class="footer-nav" data-astro-cid-sz7xmlte>  <a href="/" class="footer-link" data-astro-cid-sz7xmlte> Home </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tag/projects" class="footer-link" data-astro-cid-sz7xmlte> Projects </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tools" class="footer-link" data-astro-cid-sz7xmlte> Notes </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="https://web.chatboxai.app/" class="footer-link" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> Chatbox </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/about" class="footer-link" data-astro-cid-sz7xmlte> About </a>  </nav> <!-- 分割线 --> <div class="footer-divider" data-astro-cid-sz7xmlte></div> <!-- 版权信息 --> <div class="footer-copyright" data-astro-cid-sz7xmlte> <a href="https://asharebox.github.io" data-astro-cid-sz7xmlte>©  asharebox  ·  since 2026    ·</a> <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer" title="RSS Feed" data-astro-cid-sz7xmlte> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" aria-label="RSS Feed" data-astro-cid-sz7xmlte> <rect width="256" height="256" rx="28" fill="#ff6b35" data-astro-cid-sz7xmlte></rect> <circle cx="68" cy="189" r="24" fill="#fff" data-astro-cid-sz7xmlte></circle> <path d="M160 213h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#fff" data-astro-cid-sz7xmlte></path> <path d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z" fill="#fff" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </footer>  <!-- ★ 添加回到顶部按钮组件 --> <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-astro-cid-wlspcwf4> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-wlspcwf4> <path d="M18 15l-6-6-6 6" data-astro-cid-wlspcwf4></path> </svg> </button>   </body></html>
