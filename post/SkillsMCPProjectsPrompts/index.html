@@ -75,7 +75,7 @@ git <span class="hljs-built_in" class="hljs-built_in">clone</span> https://githu
 /react-expert
 /vue-expert
 /node-expert
-</code></pre></div></div><h3 level="3" id="33-Skill-vs-Prompt">3.3 Skill vs Prompt</h3><p>维度PromptSkill复用性复制粘贴直接调用维护性难以维护集中维护一致性容易遗漏始终一致团队协作难以共享易于共享学习曲线低中</p><h2 level="2" id="四MCPAI-的工具箱">四、MCP：AI 的「工具箱」</h2><h3 level="3" id="41-什么是-MCP">4.1 什么是 MCP？</h3><p>MCP（Model Context Protocol）是 Anthropic 推出的协议，让 AI 能够调用外部工具。</p><p><strong>类比</strong>：</p><ul><li><p>Prompt/Skill：告诉 AI「怎么做」</p></li><li><p>MCP：给 AI「工具」，让它自己做</p></li></ul><h3 level="3" id="42-MCP-的工作原理">4.2 MCP 的工作原理</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">arduino</div><div class="wrapper"><pre><code class="language-arduino">用户：帮我查一下今天的天气
+</code></pre></div></div><h3 level="3" id="33-Skill-vs-Prompt">3.3 Skill vs Prompt</h3><p>				| 复用性		| 维护性		| 一致性		| 团队协作		| 学习曲线</p><p>Prompt:  | 复制粘贴	| 难以维护	| 容易遗漏	| 难以共享		| 低</p><p>Skill: 		| 直接调用	| 集中维护	| 始终一致	| 易于共享		| 中</p><h2 level="2" id="四MCPAI-的工具箱">四、MCP：AI 的「工具箱」</h2><h3 level="3" id="41-什么是-MCP">4.1 什么是 MCP？</h3><p>MCP（Model Context Protocol）是 Anthropic 推出的协议，让 AI 能够调用外部工具。</p><p><strong>类比</strong>：</p><ul><li><p>Prompt/Skill：告诉 AI「怎么做」</p></li><li><p>MCP：给 AI「工具」，让它自己做</p></li></ul><h3 level="3" id="42-MCP-的工作原理">4.2 MCP 的工作原理</h3><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><div class="llt-code readonly"><div class="language">arduino</div><div class="wrapper"><pre><code class="language-arduino">用户：帮我查一下今天的天气
 
 AI：好的，我需要调用天气 API
     ↓
