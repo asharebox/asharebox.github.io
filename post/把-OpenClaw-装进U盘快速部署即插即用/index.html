@@ -1,0 +1,85 @@
+<!DOCTYPE html> <html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="asharebox"><meta name="msapplication-TileColor" content="#1e2030"><meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"><meta name="description" content="使用 dongsheng123132 的项目，一键制作龙虾U盘吧。"><link rel="icon" href="/favicon.ico"><title>把 OpenClaw 装进U盘，快速部署即插即用 | asharebox</title><link rel="stylesheet" href="/_astro/_page_.Q94QMkaZ.css">
+<style>.outlines a[data-anchor-tag=H1]{margin-left:0}.outlines a[data-anchor-tag=H2]{margin-left:12px}.outlines a[data-anchor-tag=H3]{margin-left:24px}.outlines a[data-anchor-tag=H4]{margin-left:36px}.outlines a[data-anchor-tag=H5]{margin-left:48px}.outlines a[data-anchor-tag=H6]{margin-left:60px}
+._tabset_selm3_1 ._tab-panel_selm3_1{display:none}._tabset_selm3_1 ._tab-panels_selm3_4{display:flex}._tabset_selm3_1 input[data-tab-name=direct]{display:none}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=direct]{display:block}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-labels_selm3_13 label[data-tab-name=direct]{border-bottom:2px solid red}._tabset_selm3_1 input[data-tab-name=app]{display:none}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=app]{display:block}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-labels_selm3_13 label[data-tab-name=app]{border-bottom:2px solid red}
+</style>
+<link rel="stylesheet" href="/_astro/_page_.ypUYv9mY.css">
+<link rel="stylesheet" href="/_astro/_id_.CdoHgwyN.css"><script type="module" src="/_astro/hoisted.DwDDK78S.js"></script></head> <body class="min-h-screen"> <header class="flex justify-between items-center px-4 py-3 border-b" style="border-color: #292e42;"> <a href="/" class="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity" style="color: #c8d3f5;"> asharebox </a> <div class="flex items-center gap-3">   <div id="auth"></div> </div> </header>  <main> <div class="content"> <div class="w-full flex gap-2 pb-2">   </div> <div class="ud-root read-only flex-1"><h1 level="1" id="把-OpenClaw-装进U盘快速部署即插即用"><strong>把 OpenClaw 装进U盘，快速部署即插即用</strong></h1><p>使用 dongsheng123132 的项目，一键制作龙虾U盘吧。</p><p>通过&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/dongsheng123132/u-claw"><u>GitHub</u></a>&nbsp;的 U-Claw 达成把 OpenClaw 装进u盘里，做成 U 盘可插任意电脑，双击即用，便携虾！</p><p><strong>两种 U 盘模式</strong></p><p><strong>便携版 U 盘Linux 启动盘原理</strong>在已有系统（Mac/Win/Linux）上运行 U 盘里的脚本从 U 盘启动整个 Linux 系统 + OpenClaw<strong>U 盘要求</strong>4GB+<strong>64GB+ USB 3.0</strong>（USB 2.0 太慢不推荐）<strong>依赖</strong>电脑已有操作系统不依赖任何已装系统<strong>适合</strong>临时用、公共电脑、演示专用 AI 工作站、无系统裸机</p><p>下面为该项目的部署教程：</p><h3 level="3" id="快速开始制作便携版-U-盘">快速开始：制作便携版 U 盘</h3><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment"># 1. 克隆代码</span>
+git <span class="hljs-built_in" class="hljs-built_in">clone</span> https://github.com/dongsheng123132/u-claw.git
+
+<span class="hljs-comment" class="hljs-comment"># 2. 补齐大依赖（Node.js + OpenClaw，国内镜像，约 1 分钟）</span>
+<span class="hljs-built_in" class="hljs-built_in">cd</span> u-claw/portable &amp;&amp; bash setup.sh
+
+<span class="hljs-comment" class="hljs-comment"># 3. 拷贝到 U 盘</span>
+<span class="hljs-built_in" class="hljs-built_in">cp</span> -R portable/ /Volumes/你的U盘/U-Claw/   <span class="hljs-comment" class="hljs-comment"># Mac</span>
+<span class="hljs-comment" class="hljs-comment"># 或 Windows 资源管理器直接拖过去</span></code></pre></div></div><p><strong>完成！</strong>&nbsp;插上 U 盘，双击启动脚本就能用。</p><h3 level="3" id="制作-Linux-启动盘">制作 Linux 启动盘</h3><p>把整个 Linux 系统 + OpenClaw 刻在 U 盘，开机从 USB 启动直接进入 AI 助手桌面。</p><p><strong>准备：</strong></p><ul><li><p><strong>64GB+ USB 3.0 U 盘</strong>（推荐三星 BAR Plus、闪迪 CZ880 等高速盘）</p></li><li><p>Linux Mint ISO（<a target="_blank" rel="noopener noreferrer nofollow" href="https://mirrors.tuna.tsinghua.edu.cn/linuxmint-cd/stable/"><u>清华镜像</u></a>&nbsp;/&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" href="https://mirrors.ustc.edu.cn/linuxmint-cd/stable/"><u>中科大镜像</u></a>）</p></li><li><p>Rufus v4.0+（<a target="_blank" rel="noopener noreferrer nofollow" href="https://rufus.ie/zh/"><u>rufus.ie</u></a>）</p></li></ul><p><strong>步骤：</strong></p><ol><li><p>Rufus 刻录 ISO → 开启&nbsp;<strong>Persistent Storage</strong>（8-16GB）</p></li><li><p>USB 启动 → 进入 Linux Mint 桌面 → 连网</p></li><li><p>运行安装脚本：</p><div class="llt-code readonly"><div class="language">arduino</div><div class="wrapper"><pre><code>curl -O https:<span class="hljs-comment" class="hljs-comment">//raw.githubusercontent.com/dongsheng123132/u-claw/main/portable/setup-linux-usb.sh</span>
+bash setup-linux-usb.sh</code></pre></div></div></li></ol><p>详细图文教程见&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" href="https://u-claw.org/guide.html"><u>guide.html → Linux 启动盘模式</u></a>。</p><h3 level="3" id="U-盘功能一览">U 盘功能一览</h3><p><strong>功能MacWindowsLinux免安装运行</strong><code>Mac-Start.commandWindows-Start.batbash Linux-Start.sh</code><strong>功能菜单</strong><code>Mac-Menu.commandWindows-Menu.batbash Linux-Menu.sh</code><strong>安装到电脑</strong><code>Mac-Install.commandWindows-Install.batbash Linux-Install.sh</code><strong>首次配置</strong><code>Config.htmlConfig.htmlConfig.html</code></p><h3 level="3" id="U-盘文件结构">U 盘文件结构</h3><div class="llt-code readonly"><div class="language">arduino</div><div class="wrapper"><pre><code>U-Claw/                          ← 整个拷到 U 盘
+├── Mac-Start.command             Mac 免安装运行
+├── Mac-Menu.command              Mac 功能菜单
+├── Mac-Install.command           安装到 Mac
+├── Windows-Start.bat             Windows 免安装运行
+├── Windows-Menu.bat              Windows 功能菜单
+├── Windows-Install.bat           安装到 Windows
+├── Linux-Start.sh                Linux 免安装运行
+├── Linux-Menu.sh                 Linux 功能菜单
+├── Linux-Install.sh              安装到 Linux
+├── setup-linux-usb.sh            Linux 启动盘内安装 OpenClaw
+├── Config.html                   首次配置页面
+├── setup.sh                      补齐依赖（开发者用）
+├── app/                          ← 大依赖（setup.sh 下载，不进 git）
+│   ├── core/                        OpenClaw + QQ 插件
+│   └── runtime/
+│       ├── node-mac-arm64/          Mac Apple Silicon
+│       ├── node-win-x64/           Windows <span class="hljs-number" class="hljs-number">64</span>-bit
+│       └── node-linux-x64/         Linux x86_64
+└── data/                         ← 用户数据（不进 git）
+    ├── .openclaw/                   配置文件
+    ├── memory/                      AI 记忆
+    └── backups/                     备份</code></pre></div></div><h3 level="3" id="桌面安装版Electron-App">桌面安装版（Electron App）</h3><p>除了 U 盘便携版，还有桌面 App 版本：</p><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code><span class="hljs-built_in" class="hljs-built_in">cd</span> u-claw-app
+bash setup.sh            <span class="hljs-comment" class="hljs-comment"># 一键安装开发环境（国内镜像）</span>
+npm run dev              <span class="hljs-comment" class="hljs-comment"># 开发模式运行</span>
+npm run build:mac-arm64  <span class="hljs-comment" class="hljs-comment"># 打包 → release/*.dmg</span>
+npm run build:win        <span class="hljs-comment" class="hljs-comment"># 打包 → release/*.exe</span></code></pre></div></div><h3 level="3" id="支持的-AI-模型">支持的 AI 模型</h3><p><strong>国产模型（无需翻墙）：</strong></p><p><strong>模型推荐场景</strong>DeepSeek编程首选，极便宜Kimi K2.5长文档，256K 上下文通义千问 Qwen免费额度大智谱 GLM学术场景MiniMax语音多模态豆包 Doubao火山引擎</p><p><strong>国际模型：</strong>&nbsp;Claude · GPT · Gemini（需翻墙或中转）</p><h3 level="3" id="支持的聊天平台">支持的聊天平台</h3><p><strong>平台状态说明</strong>QQ✅ 已预装输入 AppID + Secret 即可飞书✅ 内置企业首选Telegram✅ 内置海外推荐WhatsApp✅ 内置Baileys 协议Discord✅ 内置—微信✅ 社区插件iPad 协议</p><h3 level="3" id="国内镜像">国内镜像</h3><p>所有脚本默认走国内镜像，无需翻墙：</p><p><strong>资源镜像</strong>npm 包<code>registry.npmmirror.com</code>Node.js<code>npmmirror.com/mirrors/node</code>Electron<code>npmmirror.com/mirrors/electron</code></p><h3 level="3" id="开发--贡献">开发 &amp; 贡献</h3><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code>git <span class="hljs-built_in" class="hljs-built_in">clone</span> https://github.com/dongsheng123132/u-claw.git
+<span class="hljs-built_in" class="hljs-built_in">cd</span> u-claw/portable &amp;&amp; bash setup.sh
+bash Mac-Start.<span class="hljs-built_in" class="hljs-built_in">command</span>   <span class="hljs-comment" class="hljs-comment"># Mac 测试</span>
+bash Linux-Start.sh      <span class="hljs-comment" class="hljs-comment"># Linux 测试</span></code></pre></div></div><p><strong>平台支持：</strong></p><p><strong>平台状态</strong>Mac Apple Silicon (M1-M4)✅Linux x86_64✅Linux ARM64✅Windows x64🚧 开发中Mac Intel❌ 暂不支持</p><h2 level="2" id="相关链接">相关链接</h2><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.u-claw.org/guide.html"><u>https://www.u-claw.org/guide.html</u></a><br><a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/dongsheng123132/u-claw"><u>https://github.com/dongsheng123132/u-claw</u></a></p><script type="module">const injectHtml = (root, html) => {
+  const iframe = document.createElement("iframe");
+  const htmlContent = `<html><head></head><body>${html}</body></html>`;
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.onload = () => {
+    const doc = iframe.contentDocument || iframe.contentWindow?.document;
+    if (!doc) {
+      return;
+    }
+    doc.open();
+    doc.write(htmlContent);
+    doc.close();
+  };
+  root.replaceChildren(iframe);
+}
+  document.querySelectorAll('.playground')?.forEach(el=>{
+    const html = el.getAttribute('data-html');
+    if (html) {
+      injectHtml(el,html);
+    }
+    const indicator = document.createElement("div");
+    indicator.className = "indicator";
+    const showCode = document.createElement("div");
+    showCode.className = "show-code";
+    showCode.innerText = "code";
+    showCode.onclick = () => {
+      el.parentElement.classList.remove("preview-only");
+    };
+    const showPreview = document.createElement("div");
+    showPreview.className = "show-preview";
+    showPreview.innerText = "preview";
+    showPreview.onclick = () => {
+      el.parentElement.classList.add("preview-only");
+    };
+    indicator.appendChild(showCode);
+    indicator.appendChild(showPreview);
+    el.parentElement.appendChild(indicator);
+    if (window.screen.width < 768) {
+      showPreview.click();
+    }
+  });</script></div> <div data-page-id="把-OpenClaw-装进U盘快速部署即插即用" class="navigator flex justify-between items-center mt-4 py-4"> <a href="/post/How-I-run-multiple-10K-MRR-companies-on-a-20month-tech-stack" class="flex items-center gap-1 text-blue cursor-pointer flex-[45%]"> <div class="i-ri:arrow-left-double-line w-5 h-5 flex-shrink-0"></div> <div class="text-start">How I run multiple $10K MRR companies on a $20/month tech stack</div> </a> <div></div> </div> </div> <div class="outline-wrapper"></div> </main>  <footer class="site-footer" data-astro-cid-sz7xmlte> <!-- 导航链接 --> <nav class="footer-nav" data-astro-cid-sz7xmlte>  <a href="/" class="footer-link" data-astro-cid-sz7xmlte> Home </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tag/projects" class="footer-link" data-astro-cid-sz7xmlte> Projects </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tools" class="footer-link" data-astro-cid-sz7xmlte> Notes </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="https://web.chatboxai.app/" class="footer-link" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> Chatbox </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/about" class="footer-link" data-astro-cid-sz7xmlte> About </a>  </nav> <!-- 分割线 --> <div class="footer-divider" data-astro-cid-sz7xmlte></div> <!-- 版权信息 --> <div class="footer-copyright" data-astro-cid-sz7xmlte> <a href="https://asharebox.github.io" data-astro-cid-sz7xmlte>©  asharebox  ·  since 2026    ·</a> <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer" title="RSS Feed" data-astro-cid-sz7xmlte> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" aria-label="RSS Feed" data-astro-cid-sz7xmlte> <rect width="256" height="256" rx="28" fill="#ff6b35" data-astro-cid-sz7xmlte></rect> <circle cx="68" cy="189" r="24" fill="#fff" data-astro-cid-sz7xmlte></circle> <path d="M160 213h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#fff" data-astro-cid-sz7xmlte></path> <path d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z" fill="#fff" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </footer>  <!-- ★ 添加回到顶部按钮组件 --> <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-astro-cid-wlspcwf4> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-wlspcwf4> <path d="M18 15l-6-6-6 6" data-astro-cid-wlspcwf4></path> </svg> </button>   </body></html>
