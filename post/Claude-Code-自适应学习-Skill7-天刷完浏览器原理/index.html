@@ -1,0 +1,139 @@
+<!DOCTYPE html> <html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="asharebox"><meta name="msapplication-TileColor" content="#1e2030"><meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"><meta name="description" content="用 Claude Code 刷完了李兵老师的《浏览器工作原理与实践》专栏，37 节内容，7 天全部通关。不是简单地&#34;让 AI 讲一遍&#34;，而是每次讲完都做题验证，答错就换角度重讲，学过的知识点还会隔几天自动弹出复习题。"><link rel="icon" href="/favicon.ico"><title>Claude Code 自适应学习 Skill，7 天刷完浏览器原理 | asharebox</title><link rel="stylesheet" href="/_astro/_page_.Q94QMkaZ.css">
+<style>.outlines a[data-anchor-tag=H1]{margin-left:0}.outlines a[data-anchor-tag=H2]{margin-left:12px}.outlines a[data-anchor-tag=H3]{margin-left:24px}.outlines a[data-anchor-tag=H4]{margin-left:36px}.outlines a[data-anchor-tag=H5]{margin-left:48px}.outlines a[data-anchor-tag=H6]{margin-left:60px}
+._tabset_selm3_1 ._tab-panel_selm3_1{display:none}._tabset_selm3_1 ._tab-panels_selm3_4{display:flex}._tabset_selm3_1 input[data-tab-name=direct]{display:none}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=direct]{display:block}._tabset_selm3_1 input[data-tab-name=direct]:checked~._tab-labels_selm3_13 label[data-tab-name=direct]{border-bottom:2px solid red}._tabset_selm3_1 input[data-tab-name=app]{display:none}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-panels_selm3_4 ._tab-panel_selm3_1[data-tab-name=app]{display:block}._tabset_selm3_1 input[data-tab-name=app]:checked~._tab-labels_selm3_13 label[data-tab-name=app]{border-bottom:2px solid red}
+</style>
+<link rel="stylesheet" href="/_astro/_page_.ypUYv9mY.css">
+<link rel="stylesheet" href="/_astro/_id_.CdoHgwyN.css"><script type="module" src="/_astro/hoisted.DwDDK78S.js"></script></head> <body class="min-h-screen"> <header class="flex justify-between items-center px-4 py-3 border-b" style="border-color: #292e42;"> <a href="/" class="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity" style="color: #c8d3f5;"> asharebox </a> <div class="flex items-center gap-3">   <div id="auth"></div> </div> </header>  <main> <div class="content"> <div class="w-full flex gap-2 pb-2">  <a href="/tag/aiskills" class="rounded hover:bg-gray-200 dark:hover:bg-modal px-3 py-1 cursor-pointer">
+#aiskills </a> </div> <div class="ud-root read-only flex-1"><h1 level="1" id="Claude-Code-自适应学习-Skill7-天刷完浏览器原理"><strong>Claude Code 自适应学习 Skill，7 天刷完浏览器原理</strong></h1><p>用 Claude Code 刷完了李兵老师的《浏览器工作原理与实践》专栏，37 节内容，7 天全部通关。不是简单地&quot;让 AI 讲一遍&quot;，而是每次讲完都做题验证，答错就换角度重讲，学过的知识点还会隔几天自动弹出复习题。</p><p>能做到这些，是因为我给 Claude Code 写了一个 Skill：<strong>ai-tutor</strong>——一个自适应 AI 导师系统。</p><p>这篇文章会介绍它的设计思路、核心机制，以及如何安装使用。</p><h2 level="2" id="为什么需要这个-Skill">为什么需要这个 Skill？</h2><p>用 AI 学技术有几个常见痛点：</p><p><strong>1. 讲完了但不确定是否真懂了。</strong>&nbsp;AI 一顿输出，你觉得&quot;懂了&quot;，但过两天一问三不知。</p><p><strong>2. 没有进度管理。</strong>&nbsp;学到哪了？哪些掌握了？哪些还模糊？全靠脑子记。</p><p><strong>3. 跨会话失忆。</strong>&nbsp;昨天学到第 15 节，今天新开会话，AI 完全不知道之前学了什么。</p><p><strong>4. 一刀切的教学方式。</strong>&nbsp;学 React Hooks 和学 React Fiber 源码是两种完全不同的需求，但 AI 默认用同一套方式回答。</p><p>ai-tutor 针对这四个痛点逐个解决。</p><h2 level="2" id="核心设计讲解--实践--验证-闭环">核心设计：讲解 → 实践 → 验证 闭环</h2><p>传统的 AI 学习是&quot;单向灌输&quot;：</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><p>ai-tutor 强制加入验证环节：</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><p><strong>严禁问&quot;听懂了吗&quot;这种无效问题。</strong>&nbsp;每个知识点必须有对应的考核题，题型根据内容选择：</p><p>知识点类型考核题型概念理解情景分析题代码能力编码题调试能力调试题源码理解代码追踪题</p><h2 level="2" id="四种学习模式自动识别">四种学习模式，自动识别</h2><p>不同学习目标需要不同的教学方式。ai-tutor 根据你的输入自动选择模式：</p><h3 level="3" id="知识模式--学概念理解原理">知识模式 — 学概念、理解原理</h3><p>触发信号：纯技术名词，如&quot;学 React Hooks&quot;、&quot;理解 TypeScript 泛型&quot;</p><p><strong>特点：</strong></p><ul><li><p>按知识域规模自动选择大纲策略（小型/中型/大型）</p></li><li><p>大型知识域先展示架构鸟瞰图，让你选焦点区域</p></li><li><p>每个知识点讲完立刻出题验证</p></li><li><p>学前自动检测前置知识（学 Hooks 前先检查闭包基础）</p></li><li><p>基础不足自动补课，跳过则后续讲解时用通俗类比补偿</p></li></ul><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code>你: /ai-tutor 我想理解 React Hooks
+​
+AI Tutor:
+<span class="hljs-bullet" class="hljs-bullet">  1.</span> 前置知识检测：&quot;你了解 JS 闭包吗？&quot;
+<span class="hljs-bullet" class="hljs-bullet">  2.</span> 生成大纲，让你确认并标记已掌握的节点
+<span class="hljs-bullet" class="hljs-bullet">  3.</span> 逐节点讲解 → 每个节点配一道实践题
+<span class="hljs-bullet" class="hljs-bullet">  4.</span> 未通过 → 分级响应（概念性/细节/接近正确）
+<span class="hljs-bullet" class="hljs-bullet">  5.</span> 通过 → 更新进度，下一节
+</code></pre></div></div><h3 level="3" id="项目模式--边做项目边学">项目模式 — 边做项目边学</h3><p>触发信号：含&quot;做一个/写一个/开发/搭建&quot; + 具体产物</p><p><strong>特点：</strong></p><ul><li><p>默认不给完整代码，只给骨架和提示</p></li><li><p>按 MVP → 核心功能 → 增强拆分里程碑</p></li><li><p>自动检测开发环境（Node.js、Python、Rust 等）</p></li><li><p>卡住时渐进提示，最后才给代码片段</p></li></ul><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code>你: /ai-tutor 学 Node.js 做一个聊天室
+​
+AI Tutor:
+<span class="hljs-bullet" class="hljs-bullet">  1.</span> 澄清需求和技术栈
+<span class="hljs-bullet" class="hljs-bullet">  2.</span> 环境检测 → &quot;检测到 Node.js v20.x ✓&quot;
+<span class="hljs-bullet" class="hljs-bullet">  3.</span> 按里程碑拆分
+<span class="hljs-bullet" class="hljs-bullet">  4.</span> 每个功能：知识铺垫 → 给任务要求（不给代码）→ 你自己写
+<span class="hljs-bullet" class="hljs-bullet">  5.</span> 运行验证：&quot;打开两个标签页，A 发消息，B 能看到&quot;
+</code></pre></div></div><p><strong>逃生舱机制：</strong>&nbsp;反复卡住时，给出完整参考代码并逐行解释，然后出变式题验证你是否真正理解。</p><h3 level="3" id="源码阅读模式--理解现有项目代码">源码阅读模式 — 理解现有项目代码</h3><p>触发信号：含&quot;当前项目/这个仓库/梳理&quot; + 当前目录有项目文件</p><p><strong>特点：</strong></p><ul><li><p>自动扫描项目目录（排除 node_modules 等），识别技术栈</p></li><li><p>生成代码地图（模块关系图 + 阅读顺序）</p></li><li><p>引导你打开特定文件的特定行：&quot;打开 auth.ts，重点看 23-47 行&quot;</p></li><li><p>考核基于实际代码：&quot;Token 过期是在哪一行触发刷新的？&quot;</p></li></ul><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code>你: /ai-tutor 帮我梳理当前项目的登录鉴权模块
+​
+AI Tutor:
+<span class="hljs-bullet" class="hljs-bullet">  1.</span> 扫描项目 → 生成代码地图
+<span class="hljs-bullet" class="hljs-bullet">  2.</span> 按阅读顺序拆分节点（入口 → 中间件 → Token签发 → 刷新机制）
+<span class="hljs-bullet" class="hljs-bullet">  3.</span> 引导你打开特定文件的特定行
+<span class="hljs-bullet" class="hljs-bullet">  4.</span> 考核基于实际代码
+</code></pre></div></div><h3 level="3" id="深度讲解模式--源码级底层教学">深度讲解模式 — 源码级底层教学</h3><p>触发信号：含&quot;深入理解/底层原理/源码级/实现机制&quot;</p><p><strong>特点：</strong></p><ul><li><p>不按知识点拆，按&quot;最小可闭环机制&quot;拆分为主题块</p></li><li><p>每节必须按 5 段式展开：</p><ol start="0"><li><p>问题背景（解决什么问题）</p></li><li><p>核心数据结构（关键对象/字段）</p></li><li><p>运行流程（流程图 + 伪代码）</p></li><li><p>与旧方案对比（设计动机）</p></li><li><p>常见误解和边界（容易踩的坑）</p></li></ol></li><li><p>主题块内连续讲解，讲完后统一考核</p></li><li><p>每节至少包含一个结构图</p></li></ul><div class="llt-code readonly"><div class="language">markdown</div><div class="wrapper"><pre><code>你: /ai-tutor 深入理解 React Fiber 架构
+​
+AI Tutor:
+<span class="hljs-bullet" class="hljs-bullet">  1.</span> 前置知识检测 + 确认学习深度
+<span class="hljs-bullet" class="hljs-bullet">  2.</span> 生成架构总览图
+<span class="hljs-bullet" class="hljs-bullet">  3.</span> 按主题块拆分（Fiber架构 / Hooks实现 / 调度系统）
+<span class="hljs-bullet" class="hljs-bullet">  4.</span> 每节 5 段式深度讲解
+<span class="hljs-bullet" class="hljs-bullet">  5.</span> 主题块讲完后统一考核（源码追踪题 + 机制推理题）
+</code></pre></div></div><h2 level="2" id="间隔复习对抗遗忘">间隔复习：对抗遗忘</h2><p>基于艾宾浩斯遗忘曲线，ai-tutor 在每次启动时自动检查是否有到期需要复习的知识点：</p><div class="llt-code readonly"><div class="language">auto</div><div class="wrapper"><pre><code></code></pre></div></div><p>复习间隔按掌握等级递增：</p><ul><li><p>mastery_level 1（刚通过）→ 3 天后复习</p></li><li><p>mastery_level 2（复习过 1 次）→ 7 天后复习</p></li><li><p>mastery_level 3（复习过 2 次）→ 14 天后复习</p></li></ul><p><strong>防雪崩机制：</strong>&nbsp;到期节点超过 3 个时，只挑最早到期的 3 个复习，其余顺延。不让复习题淹没新课。</p><p>复习未通过 → mastery_level 回到 1，重新开始间隔周期。</p><h2 level="2" id="断点续学进度不丢失">断点续学：进度不丢失</h2><p>所有学习进度持久化到项目目录下的 Markdown 文件：</p><div class="llt-code readonly"><div class="language">r</div><div class="wrapper"><pre><code>.<span class="hljs-operator" class="hljs-operator">/</span>ai<span class="hljs-operator" class="hljs-operator">-</span>tutor<span class="hljs-operator" class="hljs-operator">/</span>
+├── config.yaml &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span class="hljs-comment" class="hljs-comment"># 全局配置</span>
+├── records<span class="hljs-operator" class="hljs-operator">/</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 进度记录</span>
+│ &nbsp; ├── react<span class="hljs-operator" class="hljs-operator">-</span>hooks.md
+│ &nbsp; ├── <span class="hljs-built_in" class="hljs-built_in">browser</span><span class="hljs-operator" class="hljs-operator">-</span>principles.md
+│ &nbsp; └── project<span class="hljs-operator" class="hljs-operator">-</span>auth<span class="hljs-operator" class="hljs-operator">-</span>module.md
+└── summaries<span class="hljs-operator" class="hljs-operator">/</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 归档总结</span>
+ &nbsp;  ├── react<span class="hljs-operator" class="hljs-operator">-</span>hooks_hooks<span class="hljs-operator" class="hljs-operator">-</span>basics.md
+ &nbsp;  └── <span class="hljs-built_in" class="hljs-built_in">browser</span><span class="hljs-operator" class="hljs-operator">-</span>principles_http<span class="hljs-operator" class="hljs-operator">-</span>evolution.md
+</code></pre></div></div><p>记录文件使用 YAML frontmatter 存储机器可读状态，Markdown 正文保留人读内容：</p><div class="llt-code readonly"><div class="language">yaml</div><div class="wrapper"><pre><code><span class="hljs-meta" class="hljs-meta">---</span>
+<span class="hljs-attr" class="hljs-attr">mode:</span> <span class="hljs-string" class="hljs-string">deep-dive</span>
+<span class="hljs-attr" class="hljs-attr">start_date:</span> <span class="hljs-number" class="hljs-number">2026-04-22</span>
+<span class="hljs-attr" class="hljs-attr">nodes:</span>
+ &nbsp;<span class="hljs-attr" class="hljs-attr">&quot;1.1&quot;:</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">name:</span> <span class="hljs-string" class="hljs-string">Chrome架构</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">module:</span> <span class="hljs-string" class="hljs-string">宏观视角上的浏览器</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">status:</span> <span class="hljs-string" class="hljs-string">mastered</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">attempts:</span> <span class="hljs-number" class="hljs-number">1</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">last_tested:</span> <span class="hljs-string" class="hljs-string">&quot;2026-04-25&quot;</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">mastery_level:</span> <span class="hljs-number" class="hljs-number">2</span>
+ &nbsp; &nbsp;<span class="hljs-attr" class="hljs-attr">failure_type:</span> <span class="hljs-literal" class="hljs-literal">null</span>
+<span class="hljs-meta" class="hljs-meta">---</span>
+<span class="hljs-string" class="hljs-string">​</span>
+<span class="hljs-comment" class="hljs-comment">## 学习日志</span>
+<span class="hljs-string" class="hljs-string">|</span> <span class="hljs-string" class="hljs-string">日期</span> <span class="hljs-string" class="hljs-string">|</span> <span class="hljs-string" class="hljs-string">节点</span> <span class="hljs-string" class="hljs-string">|</span> <span class="hljs-string" class="hljs-string">结果</span> <span class="hljs-string" class="hljs-string">|</span> <span class="hljs-string" class="hljs-string">备注</span> <span class="hljs-string" class="hljs-string">|</span>
+<span class="hljs-string" class="hljs-string">|------|------|------|------|</span>
+<span class="hljs-string" class="hljs-string">|</span> <span class="hljs-number" class="hljs-number">2026-04-22</span> <span class="hljs-string" class="hljs-string">|</span> <span class="hljs-number" class="hljs-number">1.1</span> <span class="hljs-string" class="hljs-string">Chrome架构</span> <span class="hljs-string" class="hljs-string">|</span> <span class="hljs-string" class="hljs-string">✓通过</span> <span class="hljs-string" class="hljs-string">|</span> <span class="hljs-string" class="hljs-string">理解多进程隔离原理</span> <span class="hljs-string" class="hljs-string">|</span>
+</code></pre></div></div><p>下次开会话说&quot;继续上次的学习&quot;，ai-tutor 读取记录，展示进度，自动从断点继续。</p><h2 level="2" id="可配置的严格度和语气">可配置的严格度和语气</h2><p>首次运行自动创建配置文件：</p><div class="llt-code readonly"><div class="language">yaml</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment"># ./ai-tutor/config.yaml</span>
+<span class="hljs-attr" class="hljs-attr">strictness:</span> <span class="hljs-string" class="hljs-string">normal</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># hard | normal | lenient</span>
+<span class="hljs-attr" class="hljs-attr">visual_tool:</span> <span class="hljs-string" class="hljs-string">mermaid</span> &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># mermaid | ascii</span>
+<span class="hljs-attr" class="hljs-attr">tone:</span> <span class="hljs-string" class="hljs-string">encouraging</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="hljs-comment" class="hljs-comment"># strict | encouraging</span>
+</code></pre></div></div><p><strong>strictness（严格等级）：</strong></p><p>等级失败后给提示连续失败降级拆分允许跳过hard第 3 次失败后连续 5 次不允许normal第 2 次失败后连续 3 次不允许lenient第 1 次失败后连续 3 次允许并标记待复习</p><p><strong>tone（语气风格）：</strong></p><ul><li><p><code>strict</code>：严谨教授，简短肯定，重点指错</p></li><li><p><code>encouraging</code>：鼓励学长，肯定进步，缓解挫败感</p></li></ul><h2 level="2" id="错误分级精准对症">错误分级：精准对症</h2><p>不是所有错误都一样。ai-tutor 将错误分为三级，精准响应：</p><p>错误类型特征策略概念性错误思路方向错换角度重讲，用可视化辅助细节错误思路对但实现有瑕疵指出关键遗漏，给一个提示接近正确只有小瑕疵给部分提示，允许微调后通过</p><p>同一个节点连续失败 3 次 → 自动拆分为更小的子知识点，逐个击破。</p><h2 level="2" id="按需加载不浪费上下文窗口">按需加载：不浪费上下文窗口</h2><p>Skill 采用分层架构，触发时只加载入口文件（<a target="_blank" rel="noopener noreferrer nofollow" href="http://SKILL.md">SKILL.md</a>），根据模式再读取对应的工作流文件：</p><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code>ai-tutor/
+├── SKILL.md &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span class="hljs-comment" class="hljs-comment"># 入口（6KB）</span>
+├── knowledge-mode.md &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 知识模式工作流</span>
+├── project-mode.md &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 项目模式工作流</span>
+├── codebase-mode.md &nbsp; &nbsp;  <span class="hljs-comment" class="hljs-comment"># 源码阅读模式工作流</span>
+├── deep-dive-mode.md &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 深度讲解模式工作流</span>
+├── visual-aids.md &nbsp; &nbsp; &nbsp;  <span class="hljs-comment" class="hljs-comment"># 可视化工具箱</span>
+└── README.md &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 用户文档</span>
+</code></pre></div></div><p>每次只加载当前模式需要的文件，节省 token 开销。</p><h2 level="2" id="实战效果">实战效果</h2><p>我用深度讲解模式刷完了浏览器原理的 37 节课程，实际体验：</p><ul><li><p><strong>学习周期</strong>：7 天（2026-04-22 ~ 2026-04-28）</p></li><li><p><strong>通过率</strong>：37 个节点全部通过</p></li><li><p><strong>错误分布</strong>：13 个节点首次答错或答不精确，主要集中在：</p><ul><li><p>混淆对象属性与作用域变量</p></li><li><p>误判管线化队头阻塞的阻塞点（响应顺序而非处理顺序）</p></li><li><p>HttpOnly 防 XSS 不防 CSRF 的区别</p></li></ul></li><li><p><strong>复习触发</strong>：3 次启动时触发了间隔复习，共复习了 3 个早期知识点</p></li></ul><p>教学完成后还可以一键生成完整复习文档，标注所有曾经答错的知识点。</p><h2 level="2" id="安装和使用">安装和使用</h2><h3 level="3" id="安装">安装</h3><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment"># MacOS / Linux</span>
+git <span class="hljs-built_in" class="hljs-built_in">clone</span> https://github.com/Chih-hengChen/ai-tutor.git ~/.claude/skills/ai-tutor
+​
+<span class="hljs-comment" class="hljs-comment"># Windows (PowerShell)</span>
+git <span class="hljs-built_in" class="hljs-built_in">clone</span> https://github.com/Chih-hengChen/ai-tutor.git <span class="hljs-string" class="hljs-string">&quot;<span class="hljs-variable" class="hljs-variable">$env</span>:USERPROFILE.claude\skills\ai-tutor&quot;</span>
+</code></pre></div></div><h3 level="3" id="使用">使用</h3><div class="llt-code readonly"><div class="language">bash</div><div class="wrapper"><pre><code><span class="hljs-comment" class="hljs-comment"># 开始学习</span>
+/ai-tutor 我想学 React Hooks
+/ai-tutor 学 Node.js 做一个聊天室
+/ai-tutor 帮我梳理当前项目的鉴权模块
+/ai-tutor 深入理解 React Fiber 架构
+​
+<span class="hljs-comment" class="hljs-comment"># 继续上次</span>
+/ai-tutor 继续上次的学习
+​
+<span class="hljs-comment" class="hljs-comment"># 管理命令</span>
+/ai-tutor status &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="hljs-comment" class="hljs-comment"># 查看进度面板</span>
+/ai-tutor reset react-hooks &nbsp; <span class="hljs-comment" class="hljs-comment"># 重置某个主题</span>
+/ai-tutor reset --all &nbsp; &nbsp; &nbsp; &nbsp; <span class="hljs-comment" class="hljs-comment"># 重置所有（需二次确认）</span>
+​
+<span class="hljs-comment" class="hljs-comment"># 随时退出</span>
+退出教学
+</code></pre></div></div><p>唯一要求：<a target="_blank" rel="noopener noreferrer nofollow" href="https://link.juejin.cn/?target=https%3A%2F%2Fdocs.anthropic.com%2Fen%2Fdocs%2Fclaude-code">Claude Code</a>&nbsp;CLI 或桌面端，无额外依赖。</p><h2 level="2" id="技术实现要点">技术实现要点</h2><p>如果你也想写 Claude Code Skill，几个关键设计决策值得参考：</p><h3 level="3" id="1-状态持久化用-Markdown--YAML-frontmatter">1. 状态持久化用 Markdown + YAML frontmatter</h3><p>不用 JSON 数据库，直接用 Markdown 文件。frontmatter 存机器状态，正文存人读内容。好处：</p><ul><li><p>用户可以直接打开看，也可以手动编辑</p></li><li><p>Git 友好，可以版本控制学习进度</p></li><li><p>Claude Code 原生支持读写，零依赖</p></li></ul><h3 level="3" id="2-工作流分文件按需加载">2. 工作流分文件，按需加载</h3><p>一个 2000 行的 Skill 文件会吃掉大量上下文窗口。拆成入口 + 子文件，每次只加载需要的。<a target="_blank" rel="noopener noreferrer nofollow" href="http://SKILL.md">SKILL.md</a> 做路由，子文件做执行。</p><h3 level="3" id="3-恢复时强制重读工作流文件">3. 恢复时强制重读工作流文件</h3><p>这是一个踩过的坑：恢复学习时如果凭记忆执行工作流，会退化为默认的简洁回答风格。解决方法是在 Step 3（恢复检测）中加入强制规则：恢复时必须用 Read 工具重新读取对应的工作流文件。</p><h3 level="3" id="4-间隔复习设上限">4. 间隔复习设上限</h3><p>不加限制的间隔复习会导致&quot;复习雪崩&quot;——攒了几十道复习题，新课还没开始就想退出了。限制每次最多 3 道复习题，其余顺延。</p><h2 level="2" id="最后">最后</h2><p>ai-tutor 的核心思路其实很简单：<strong>让 AI 不能只讲不验，学了就必须验证，验证不过就换方式重讲。</strong>&nbsp;再加上进度持久化、间隔复习、错误分级这些学习科学的基本原则，就能把 Claude Code 变成一个还不错的私人编程教练。</p><p>如果你也在用 Claude Code 学技术，可以试试看。欢迎提 Issue 和 PR。</p><p>GitHub:&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FChih-hengChen%2Fai-tutor">github.com/Chih-hengCh…</a></p><p></p><script type="module">const injectHtml = (root, html) => {
+  const iframe = document.createElement("iframe");
+  const htmlContent = `<html><head></head><body>${html}</body></html>`;
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.onload = () => {
+    const doc = iframe.contentDocument || iframe.contentWindow?.document;
+    if (!doc) {
+      return;
+    }
+    doc.open();
+    doc.write(htmlContent);
+    doc.close();
+  };
+  root.replaceChildren(iframe);
+}
+  document.querySelectorAll('.playground')?.forEach(el=>{
+    const html = el.getAttribute('data-html');
+    if (html) {
+      injectHtml(el,html);
+    }
+    const indicator = document.createElement("div");
+    indicator.className = "indicator";
+    const showCode = document.createElement("div");
+    showCode.className = "show-code";
+    showCode.innerText = "code";
+    showCode.onclick = () => {
+      el.parentElement.classList.remove("preview-only");
+    };
+    const showPreview = document.createElement("div");
+    showPreview.className = "show-preview";
+    showPreview.innerText = "preview";
+    showPreview.onclick = () => {
+      el.parentElement.classList.add("preview-only");
+    };
+    indicator.appendChild(showCode);
+    indicator.appendChild(showPreview);
+    el.parentElement.appendChild(indicator);
+    if (window.screen.width < 768) {
+      showPreview.click();
+    }
+  });</script></div> <div data-page-id="Claude-Code-自适应学习-Skill7-天刷完浏览器原理" class="navigator flex justify-between items-center mt-4 py-4"> <a href="/post/财务数据分析师提示词" class="flex items-center gap-1 text-blue cursor-pointer flex-[45%]"> <div class="i-ri:arrow-left-double-line w-5 h-5 flex-shrink-0"></div> <div class="text-start">财务数据分析师提示词</div> </a> <div></div> </div> </div> <div class="outline-wrapper"></div> </main>  <footer class="site-footer" data-astro-cid-sz7xmlte> <!-- 导航链接 --> <nav class="footer-nav" data-astro-cid-sz7xmlte>  <a href="/" class="footer-link" data-astro-cid-sz7xmlte> Home </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tag/projects" class="footer-link" data-astro-cid-sz7xmlte> Projects </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/tools" class="footer-link" data-astro-cid-sz7xmlte> Notes </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="https://web.chatboxai.app/" class="footer-link" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> Chatbox </a> <span class="nav-dot" data-astro-cid-sz7xmlte>·</span> <a href="/about" class="footer-link" data-astro-cid-sz7xmlte> About </a>  </nav> <!-- 分割线 --> <div class="footer-divider" data-astro-cid-sz7xmlte></div> <!-- 版权信息 --> <div class="footer-copyright" data-astro-cid-sz7xmlte> <a href="https://asharebox.github.io" data-astro-cid-sz7xmlte>©  asharebox  ·  since 2026    ·</a> <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer" title="RSS Feed" data-astro-cid-sz7xmlte> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" aria-label="RSS Feed" data-astro-cid-sz7xmlte> <rect width="256" height="256" rx="28" fill="#ff6b35" data-astro-cid-sz7xmlte></rect> <circle cx="68" cy="189" r="24" fill="#fff" data-astro-cid-sz7xmlte></circle> <path d="M160 213h-34a82 82 0 0 0-82-82v-34a116 116 0 0 1 116 116z" fill="#fff" data-astro-cid-sz7xmlte></path> <path d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z" fill="#fff" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </footer>  <!-- ★ 添加回到顶部按钮组件 --> <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-astro-cid-wlspcwf4> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-wlspcwf4> <path d="M18 15l-6-6-6 6" data-astro-cid-wlspcwf4></path> </svg> </button>   </body></html>
